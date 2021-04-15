@@ -1,32 +1,27 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+import Hero from '../components/Hero';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data }) => (
   // const content = data.markdownRemark;
 
-  return (
-    <Layout>
-      {/* <SEO
+  <Layout>
+    {/* <SEO
         title={content.frontmatter.title}
         description={content.frontmatter.description || content.excerpt}
       /> */}
-      <main>
-        <header>
-          {/* <h1>{content.frontmatter.title}</h1>
+    <main>
+      <header>
+        {/* <h1>{content.frontmatter.title}</h1>
           <p>{content.frontmatter.description}</p> */}
-        </header>
-        {/* <section
-          dangerouslySetInnerHTML={{ __html: content.html }}
-          itemProp="articleBody"
-        /> */}
-      </main>
-    </Layout>
-  );
-};
-
+      </header>
+      <Hero />
+    </main>
+  </Layout>
+);
 // export const pageQuery = graphql`
 //   query PageBySlug {
 //     site {
