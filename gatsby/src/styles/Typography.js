@@ -18,6 +18,7 @@ const Typography = createGlobalStyle`
 
   ul {
     padding: 0;
+    list-style-type: none;
   }
 
 
