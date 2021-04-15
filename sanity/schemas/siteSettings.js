@@ -13,9 +13,9 @@ export default {
       title: 'Title',
     },
     {
-      name: 'subtitle',
+      name: 'lang',
       type: 'string',
-      title: 'Subtitle',
+      title: 'Language',
     },
     {
       name: 'description',
