@@ -5,7 +5,7 @@
     "dataset": "production"
   },
   "project": {
-    "name": "gatsbySanityStarter"
+    "name": "Masterprojekt"
   },
   "plugins": [
     "@sanity/base",

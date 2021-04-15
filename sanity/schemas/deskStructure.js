@@ -5,11 +5,9 @@ export default () =>
     .title('Base')
     .items([
       S.listItem()
-        .title('settings')
-        .child(
-          S.document().schemaType('siteSettings').documentId('siteSettings')
-        ),
+        .title('Config')
+        .child(S.document().schemaType('siteConfig').documentId('siteConfig')),
       ...S.documentTypeListItems().filter(
-        (item) => !['siteSettings'].includes(item.getId())
+        (item) => !['siteConfig'].includes(item.getId())
       ),
     ]);
