@@ -5,10 +5,7 @@ dotenv.config({ path: '.env' });
 
 export default {
   siteMetadata: {
-    title: projectConfig.title,
-    description: projectConfig.description,
     siteUrl: projectConfig.siteUrl,
-    language: projectConfig.language,
   },
 
   flags: { DEV_SSR: true },

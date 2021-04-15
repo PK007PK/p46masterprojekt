@@ -1,8 +1,5 @@
 const projectConfig = {
-  title: 'Gatsby boilerplate',
-  description: 'Gatsby starter site',
-  siteUrl: 'https://pkgatsbystarter.netlify.com',
-  language: 'en',
+  siteUrl: 'https://masterprojekt.pl',
   pagesAmountInSet: 2,
   trackingGoogleId: 'sdsdsdsds',
 };
