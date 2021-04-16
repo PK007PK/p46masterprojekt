@@ -86,12 +86,12 @@ const NavStyle = styled.nav`
 `;
 
 const menuData = [
-  { name: 'O nas', link: '/test' },
-  { name: 'Dokonania', link: '/test' },
-  { name: 'Oferta', link: '/test' },
-  { name: 'Doświadczenie', link: '/test' },
-  { name: 'Referencje', link: '/test' },
-  { name: 'Kontakt', link: '/blog/1' },
+  { id: 0, name: 'O nas', link: '/test' },
+  { id: 1, name: 'Dokonania', link: '/test' },
+  { id: 2, name: 'Oferta', link: '/test' },
+  { id: 3, name: 'Doświadczenie', link: '/test' },
+  { id: 4, name: 'Referencje', link: '/test' },
+  { id: 5, name: 'Kontakt', link: '/blog/1' },
 ];
 
 function MobileMenu() {
@@ -101,7 +101,7 @@ function MobileMenu() {
         <BootsColumn>
           <ul className="mobileMenuList">
             {menuData.map((item) => (
-              <li>
+              <li key={item.id}>
                 <Link to={item.link}>{item.name}</Link>
               </li>
             ))}
@@ -131,7 +131,7 @@ export default function Navbar() {
           <BootsColumn xxs="8" md="10" className="menuColumn">
             <ul className="desktopMenuList">
               {menuData.map((item) => (
-                <li>
+                <li key={item.id}>
                   <Link to={item.link}>{item.name}</Link>
                 </li>
               ))}

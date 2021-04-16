@@ -1,4 +1,5 @@
 import { useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby'
 import React from 'react';
 import styled from 'styled-components';
 import { BootsContainer } from './BootsElements';
