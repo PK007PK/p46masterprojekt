@@ -21,8 +21,17 @@ const Typography = createGlobalStyle`
     list-style-type: none;
   }
 
+.leadTxt {
+  color: var(--darkTxt);
+  font-size: var(--leadSize);
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  line-height: 1.35;
+}
 
-
+.activeTxt {
+color: var(--activeTxt);
+}
 `;
 
 export default Typography;

@@ -18,6 +18,12 @@ const SEO = ({ children, location, title, image }) => {
       <html lang={data.sanitySiteConfig.lang} />
       <title>{title}</title>
 
+      {/* CSS */}
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@300;400;800&display=swap"
+        rel="stylesheet"
+      />
       {/* Fav Icons */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="alternate icon" href="/favicon.ico" />

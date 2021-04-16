@@ -12,6 +12,17 @@ export default {
   plugins: [
     'gatsby-plugin-styled-components',
     {
+      resolve: `gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        resourceType: `video`,
+        // type: `type Value`,
+        // prefix: `abc-xyz`,
+      },
+    },
+    {
       resolve: `gatsby-source-sanity`,
       options: {
         projectId: `10e4smak`,
@@ -20,6 +31,14 @@ export default {
         watchMode: true,
         apiVersion: '2021-04-14',
         graphqlTag: 'default',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /svg/,
+        },
       },
     },
     {

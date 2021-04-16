@@ -1,43 +1,31 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+import GridSection from '../components/GridSection';
 import Hero from '../components/Hero';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import TxtSection from '../components/TxtSection';
 
 const IndexPage = ({ data }) => (
   // const content = data.markdownRemark;
 
   <Layout>
-    {/* <SEO
-        title={content.frontmatter.title}
-        description={content.frontmatter.description || content.excerpt}
-      /> */}
+    <SEO />
     <main>
-      <header>
-        {/* <h1>{content.frontmatter.title}</h1>
-          <p>{content.frontmatter.description}</p> */}
-      </header>
-      <Hero />
+      <Hero videoSrcURL={data.cloudinaryMedia.url} />
+      <TxtSection />
+      <GridSection />
     </main>
   </Layout>
 );
-// export const pageQuery = graphql`
-//   query PageBySlug {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     markdownRemark(frontmatter: { slug: { eq: "gatsby-starter" } }) {
-//       excerpt(pruneLength: 160)
-//       html
-//       frontmatter {
-//         description
-//         title
-//       }
-//     }
-//   }
-// `;
+
+export const pageQuery = graphql`
+  query MyQuery {
+    cloudinaryMedia(public_id: { eq: "video2_h1olp4" }) {
+      url
+    }
+  }
+`;
 
 export default IndexPage;

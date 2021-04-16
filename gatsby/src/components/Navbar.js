@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
+
 import styled from 'styled-components';
 import { HiOutlineMenu as Burger } from '@react-icons/all-files/hi/HiOutlineMenu';
 import { ImExit as Exit } from '@react-icons/all-files/im/ImExit';
 import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
+import Logo from '../assets/svg/logo2.svg';
 
 const NavStyle = styled.nav`
+  z-index: 10;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
   .logo {
     margin: 1rem 0;
+    svg {
+      z-index: 110;
+    }
   }
 
   .desktopMenuList {
     display: none;
+
     ${({ theme }) => theme.media.mdAbove} {
       display: fiex;
       justify-content: flex-end;
@@ -19,6 +29,10 @@ const NavStyle = styled.nav`
 
     li {
       margin-left: 30px;
+    }
+
+    a {
+      color: white;
     }
   }
 
@@ -67,13 +81,17 @@ const NavStyle = styled.nav`
   .menuColumn {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
   }
 `;
 
 const menuData = [
-  { name: 'Pierwszy', link: '/test' },
-  { name: 'Drugi', link: '/blog/1' },
+  { name: 'O nas', link: '/test' },
+  { name: 'Dokonania', link: '/test' },
+  { name: 'Oferta', link: '/test' },
+  { name: 'Doświadczenie', link: '/test' },
+  { name: 'Referencje', link: '/test' },
+  { name: 'Kontakt', link: '/blog/1' },
 ];
 
 function MobileMenu() {
@@ -101,12 +119,16 @@ export default function Navbar() {
     <NavStyle>
       <BootsContainer>
         <BootsRow>
-          <BootsColumn xxs="9" md="3">
+          <BootsColumn xxs="4" md="2">
             <Link to="/" className="logo">
-              Index
+              <Logo
+                style={{
+                  marginTop: '15px',
+                }}
+              />
             </Link>
           </BootsColumn>
-          <BootsColumn xxs="3" md="9" className="menuColumn">
+          <BootsColumn xxs="8" md="10" className="menuColumn">
             <ul className="desktopMenuList">
               {menuData.map((item) => (
                 <li>
@@ -119,7 +141,11 @@ export default function Navbar() {
               className="mobileButton"
               onClick={handleClick}
             >
-              {isOpen ? <Exit style={{ color: 'white' }} /> : <Burger />}
+              {isOpen ? (
+                <Exit style={{ color: 'white', marginTop: '15px' }} />
+              ) : (
+                <Burger style={{ color: 'white', marginTop: '15px' }} />
+              )}
             </button>
             {isOpen && <MobileMenu />}
           </BootsColumn>
