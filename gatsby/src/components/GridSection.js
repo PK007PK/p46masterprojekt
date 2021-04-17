@@ -1,5 +1,5 @@
-import { useStaticQuery } from 'gatsby';
-import { graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby';
+
 import React from 'react';
 import styled from 'styled-components';
 import { BootsContainer } from './BootsElements';
@@ -42,9 +42,11 @@ const GridTileStyles = styled.div`
 
 function GridTile({ title, link }) {
   return (
-    <GridTileStyles>
-      <h3>{title}</h3>
-    </GridTileStyles>
+    <Link to={link}>
+      <GridTileStyles>
+        <h3>{title}</h3>
+      </GridTileStyles>
+    </Link>
   );
 }
 
@@ -58,21 +60,22 @@ export default function GridSection() {
       }
     }
   `);
+
   return (
     <GridSectionStyles>
       <BootsContainer>
         <div className="grid">
           <div className="red">
-            <GridTile title="Przygotowanie projektów" />
+            <GridTile title="Przygotowanie projektów" link="/projekty" />
           </div>
           <div className="blue">
-            <GridTile title="Rozliczanie projektów" />
+            <GridTile title="Rozliczanie projektów" link="/rozliczanie" />
           </div>
           <div className="yellow">
-            <GridTile title="Analizy finansowe" />
+            <GridTile title="Analizy finansowe" link="/finanse" />
           </div>
           <div className="navy">
-            <GridTile title="Stała obsługa" />
+            <GridTile title="Stała obsługa" link="/obsluga" />
           </div>
         </div>
       </BootsContainer>
