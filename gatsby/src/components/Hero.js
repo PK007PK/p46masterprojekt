@@ -1,24 +1,18 @@
-// Znaleźć video *
-// Zapobrać z cloudinary *
-// Upchnąć video do gatsby *
-// Przyjmuje link do video *
-// Przyjmuje dane do karuzeli
-// Przyjmuje napisy
-
 import React from 'react';
 import styled from 'styled-components';
 import { BootsContainer } from './BootsElements';
 
-const VideoStyle = styled.div`
-  .myVideo {
-    position: absolute;
-    z-index: -2;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    margin-top: -80px;
-  }
+const SectionHeroStyles = styled.div`
+  height: 100vh;
+  max-height: 800px;
+  color: white;
+  position: relative;
+  margin-top: -56px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .wrapper {
     position: absolute;
@@ -27,20 +21,17 @@ const VideoStyle = styled.div`
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    opacity: 0.5;
-    background-image: url(https://cdnjs.cloudflare.com/ajax/libs/vegas/2.3.1/overlays/03.png);
+    background-color: rgba(0, 0, 0, 0.5);
   }
-`;
 
-const HeaderStyle = styled.header`
-  height: calc(100vh - 93px);
-  color: white;
-
-  .headerWrapper {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .myVideo {
+    position: absolute;
+    z-index: -2;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: saturate(30%);
   }
 
   .numbers {
@@ -55,13 +46,12 @@ const HeaderStyle = styled.header`
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
     font-weight: 800;
     letter-spacing: -0.39px;
-    font-family: Poppins, sans-serif;
     display: block;
   }
 
   .start {
     font-style: normal;
-    background-color: #8d99ae;
+    background-color: var(--grey);
   }
 
   .end {
@@ -83,18 +73,15 @@ const HeaderStyle = styled.header`
   }
 `;
 
-export default function Hero({ videoSrcURL, videoTitle, ...props }) {
+export default function SectionHero({ videoSrcURL, videoTitle, ...props }) {
   return (
-    <div>
-      <VideoStyle>
-        <div className="wrapper" />
-        <video autoPlay muted loop className="myVideo">
-          <source src={videoSrcURL} type="video/mp4" />
-        </video>
-      </VideoStyle>
-      <HeaderStyle>
-        <BootsContainer className="headerWrapper">
-          <span className="numbers">480 mln zł dotacji</span>
+    <SectionHeroStyles>
+      <div className="wrapper" />
+      <video autoPlay muted loop className="myVideo">
+        <source src={videoSrcURL} type="video/mp4" />
+      </video>
+      <BootsContainer>
+        <div>
           <h1 className="title">
             <em className="start">Ma</em>ster<em className="end">projekt</em>
           </h1>
@@ -104,8 +91,8 @@ export default function Hero({ videoSrcURL, videoTitle, ...props }) {
             <br />
             aplikacyjne
           </p>
-        </BootsContainer>
-      </HeaderStyle>
-    </div>
+        </div>
+      </BootsContainer>
+    </SectionHeroStyles>
   );
 }

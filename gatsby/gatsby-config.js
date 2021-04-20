@@ -10,6 +10,7 @@ export default {
 
   flags: { DEV_SSR: true },
   plugins: [
+    `gatsby-plugin-image`,
     'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-source-cloudinary`,

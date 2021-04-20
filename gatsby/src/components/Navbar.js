@@ -5,13 +5,13 @@ import styled from 'styled-components';
 import { HiOutlineMenu as Burger } from '@react-icons/all-files/hi/HiOutlineMenu';
 import { ImExit as Exit } from '@react-icons/all-files/im/ImExit';
 import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
-import Logo from '../assets/svg/logo2.svg';
+// import Logo from '../assets/svg/logo2.svg';
 
 const NavStyle = styled.nav`
   z-index: 10;
   font-size: 1.4rem;
   text-transform: uppercase;
-
+  /* background-color: rgba(0, 0, 0, 0.5); */
   .logo {
     margin: 1rem 0;
     svg {
@@ -121,11 +121,11 @@ export default function Navbar() {
         <BootsRow>
           <BootsColumn xxs="4" md="2">
             <Link to="/" className="logo">
-              <Logo
+              {/* <Logo
                 style={{
                   marginTop: '15px',
                 }}
-              />
+              /> */}
             </Link>
           </BootsColumn>
           <BootsColumn xxs="8" md="10" className="menuColumn">

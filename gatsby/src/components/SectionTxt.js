@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { BootsContainer } from './BootsElements';
 
 const TxtSectionStyles = styled.section`
-  padding: var(--sectionPadding);
+  padding: 150px 0 50px;
 `;
 
 export default function TxtSection() {

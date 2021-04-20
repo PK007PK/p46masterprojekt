@@ -1,28 +1,32 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import GridSection from '../components/GridSection';
+import SectionContestWon from '../components/SectionContestWon';
+import SectionGrid from '../components/SectionGrid';
 import Hero from '../components/Hero';
+import SectionLatestNews from '../components/SectionLatestNews';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import TxtSection from '../components/TxtSection';
+import SectionTxt from '../components/SectionTxt';
+import SectionAdd from '../components/SectionAdd';
 
 const IndexPage = ({ data }) => (
-  // const content = data.markdownRemark;
-
   <Layout>
     <SEO />
     <main>
       <Hero videoSrcURL={data.cloudinaryMedia.url} />
-      <TxtSection />
-      <GridSection />
+      <SectionTxt />
+      <SectionGrid />
+      <SectionLatestNews />
+      <SectionContestWon />
+      <SectionAdd />
     </main>
   </Layout>
 );
 
 export const pageQuery = graphql`
   query MyQuery {
-    cloudinaryMedia(public_id: { eq: "video2_h1olp4" }) {
+    cloudinaryMedia(public_id: { eq: "blurry_cw7p2n" }) {
       url
     }
   }

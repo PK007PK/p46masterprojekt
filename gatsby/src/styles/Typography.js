@@ -10,10 +10,9 @@ const Typography = createGlobalStyle`
     font-weight: normal;
     margin: 0;
   }
+
   a {
-    color: var(--black);
-    text-decoration-color: var(--red);
-    text-decoration-skip-ink: none;
+    text-decoration: none !important;
   }
 
   ul {

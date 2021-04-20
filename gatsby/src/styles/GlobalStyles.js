@@ -10,26 +10,36 @@ const GlobalStyles = createGlobalStyle`
 } */
 
 html {
+/* Styling */
+    box-sizing: border-box;
+    font-size: 10px;
+
+/* Variables:  */
+    /* Colors */
     --red: #ff0000;
     --black: #393939;
-    --grey: #3A3A3A;
+    --grey: #8d99ae;
     --gray: var(--grey);
+    --darkOrange: rgba(255, 182, 72, 0.8);
     --lightGrey: #e1e1e1;
     --lightGray: var(--lightGrey);
     --offWhite: #ededed;
     --maxWidth: #1000px;
     --darkTxt: #252525;
     --activeTxt: #f26522;
-    --bs: 0 12px 24px 0 rgba(0,0,0,0.99);
 
     /* Spacings */
-    --sectionPadding: 100px 0px 25px 0px;
+    --sectionPadding: 50px 0px 50px 0px;
+    --cardPadding: 25px;
 
     /* Font sizes */
+    --smallSize: 14px;
+    --headingSize: 25px;
     --leadSize: 40px;
 
-    box-sizing: border-box;
-    font-size: 10px;
+    /* FX */
+    --basicTransition: 0.4s;
+
 }
 
 *, *:before, *:after {
