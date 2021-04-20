@@ -6,6 +6,19 @@ const CardGrantStyles = styled.div`
   margin-bottom: var(--cardPadding);
   padding: var(--cardPadding);
   padding-top: 0;
+
+  .company,
+  .grant,
+  .title {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+  .company {
+    font-weight: bold;
+  }
+  .grant {
+    color: var(--activeTxt);
+  }
 `;
 
 export default function CardGrant({ title, imgSrc, company, grant }) {

@@ -172,6 +172,16 @@ export default function SectionGrid() {
   return (
     <SectionGridStyles>
       <BootsContainer>
+        <h2 className="leadTxt">
+          Od 2002 roku dla naszych Klientów pozyskaliśmy
+          <br /> <span className="activeTxt">480 mln zł</span> dotacji na blisko
+          <span className="activeTxt"> 180 projektów</span>
+        </h2>
+        <p className="infoTxt">
+          Oferujemy kompleksową obsługę w zakresie aplikowania o fundusze i
+          rozliczania otrzymanych środków. Oferta skierowana jest do jednostek
+          samorządu terytorialnego oraz instytucji publicznych
+        </p>
         <div className="grid">
           <div className="red">
             <GridTile

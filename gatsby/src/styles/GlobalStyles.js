@@ -29,7 +29,7 @@ html {
     --activeTxt: #f26522;
 
     /* Spacings */
-    --sectionPadding: 50px 0px 50px 0px;
+    --sectionPadding: 150px 0px 0px 0px;
     --cardPadding: 25px;
 
     /* Font sizes */

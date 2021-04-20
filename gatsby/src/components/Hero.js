@@ -3,25 +3,28 @@ import styled from 'styled-components';
 import { BootsContainer } from './BootsElements';
 
 const SectionHeroStyles = styled.div`
-  height: 100vh;
+  height: 105vh;
   max-height: 800px;
   color: white;
   position: relative;
-  margin-top: -56px;
+  margin-top: -101px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .wrapper {
+  .darkWrapper {
     position: absolute;
     z-index: -1;
-    right: 0;
+    top: 0;
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    left: 0;
+    right: 0;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .txtWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .myVideo {
@@ -34,10 +37,8 @@ const SectionHeroStyles = styled.div`
     filter: saturate(30%);
   }
 
-  .numbers {
-    margin-left: 2px;
-    margin-bottom: 5px;
-    color: #8d99ae;
+  .motto {
+    margin-top: 100px;
   }
 
   .title {
@@ -71,17 +72,24 @@ const SectionHeroStyles = styled.div`
     line-height: 43px;
     letter-spacing: 3px;
   }
+
+  .funds {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
 `;
 
 export default function SectionHero({ videoSrcURL, videoTitle, ...props }) {
   return (
     <SectionHeroStyles>
-      <div className="wrapper" />
+      <div className="darkWrapper" />
       <video autoPlay muted loop className="myVideo">
         <source src={videoSrcURL} type="video/mp4" />
       </video>
-      <BootsContainer>
-        <div>
+      <BootsContainer className="txtWrapper">
+        <div />
+        <div className="motto">
           <h1 className="title">
             <em className="start">Ma</em>ster<em className="end">projekt</em>
           </h1>
@@ -91,6 +99,11 @@ export default function SectionHero({ videoSrcURL, videoTitle, ...props }) {
             <br />
             aplikacyjne
           </p>
+        </div>
+        <div className="funds">
+          <div className="subtitle">Fundusze Strukturalne</div>
+          <div className="subtitle">Programy krajowe</div>
+          <div className="subtitle">Fundusze EOG / "Norweskie"</div>
         </div>
       </BootsContainer>
     </SectionHeroStyles>

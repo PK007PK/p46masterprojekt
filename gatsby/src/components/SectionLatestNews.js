@@ -7,10 +7,6 @@ import CardSimple from './CardSimple';
 const LatestNewsStyles = styled.section`
   padding: var(--sectionPadding);
 
-  .newsWrapper {
-    margin-top: 50px;
-  }
-
   .readMoreWrapper {
     text-align: right;
     margin-top: 50px;
@@ -29,6 +25,7 @@ export default function LatestNews() {
     <LatestNewsStyles>
       <BootsContainer>
         <h2 className="leadTxt">Najnowsze informacje</h2>
+        <p className="infoTxt">Aktualności, wydarzenia, konkursy</p>
         <BootsRow className="newsWrapper">
           <BootsColumn md="4">
             <CardSimple

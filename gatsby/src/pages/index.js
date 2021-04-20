@@ -7,7 +7,6 @@ import SectionLatestNews from '../components/SectionLatestNews';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import SectionTxt from '../components/SectionTxt';
 import SectionAdd from '../components/SectionAdd';
 
 const IndexPage = ({ data }) => (
@@ -15,7 +14,6 @@ const IndexPage = ({ data }) => (
     <SEO />
     <main>
       <Hero videoSrcURL={data.cloudinaryMedia.url} />
-      <SectionTxt />
       <SectionGrid />
       <SectionLatestNews />
       <SectionContestWon />
