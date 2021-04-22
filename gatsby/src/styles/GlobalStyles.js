@@ -29,17 +29,18 @@ html {
     --activeTxt: #f26522;
 
     /* Spacings */
+    --sectionPaddingMob: 75px 0px 0px 0px;
     --sectionPadding: 150px 0px 0px 0px;
     --cardPadding: 25px;
 
     /* Font sizes */
     --smallSize: 14px;
     --headingSize: 25px;
+    --leadSizeMob: 30px;
     --leadSize: 40px;
 
     /* FX */
     --basicTransition: 0.4s;
-
 }
 
 *, *:before, *:after {
@@ -54,18 +55,16 @@ body {
     font-family: 'Poppins', sans-serif;
 }
     
-}
+
 
 a {
     text-decoration: none;
     color: var(--black);
 }
+
 a:hover {
     text-decoration: underline;
 }
-
-
-
 
 `;
 

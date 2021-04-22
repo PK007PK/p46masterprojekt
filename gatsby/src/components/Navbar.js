@@ -11,7 +11,6 @@ const NavStyle = styled.nav`
   z-index: 10;
   font-size: 1.4rem;
   text-transform: uppercase;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   .logo {
     svg {
       margin-top: 8px;
@@ -58,7 +57,7 @@ const NavStyle = styled.nav`
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    min-width: 100%;
     height: 100vh;
     z-index: 50;
     background-color: black;
@@ -114,7 +113,15 @@ function MobileMenu() {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => setIsOpen((prevState) => !prevState);
+  const handleClick = () => {
+    setIsOpen((prevState) => !prevState);
+    if (isOpen) {
+      document.body.style.overflow = 'visible';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
   return (
     <NavStyle>
       <BootsContainer>

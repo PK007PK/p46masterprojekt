@@ -24,19 +24,34 @@ const Typography = createGlobalStyle`
 
 .leadTxt {
   color: var(--darkTxt);
-  font-size: var(--leadSize);
   text-align: center;
   font-family: 'Merriweather', serif;
   line-height: 1.35;
+
+  ${({ theme }) => theme.media.smAbove} {
+    font-size: var(--leadSizeMob);
+  }
+
+  ${({ theme }) => theme.media.mdAbove} {
+    font-size: var(--leadSize);
+  }
+
 }
 
 .infoTxt {
-    color: var(--darkTxt);
-    font-size: 20px;
-    text-align: center;
-    line-height: 1.8;
-    margin: 25px 0 50px;
+  color: var(--darkTxt);
+  text-align: center;
+  line-height: 1.8;
+  margin: 25px 0 50px;
+  
+  ${({ theme }) => theme.media.smAbove} {
+    font-size: 16px;  
   }
+
+  ${({ theme }) => theme.media.mdAbove} {
+    font-size: 20px;  
+  }
+}
 
 .activeTxt {
 color: var(--activeTxt);

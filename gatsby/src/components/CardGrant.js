@@ -6,7 +6,7 @@ const CardGrantStyles = styled.div`
   margin-bottom: var(--cardPadding);
   padding: var(--cardPadding);
   padding-top: 0;
-
+  box-shadow: ${({ theme }) => theme.elevation.dp1};
   .company,
   .grant,
   .title {

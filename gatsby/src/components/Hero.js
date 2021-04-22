@@ -50,7 +50,7 @@ const SectionHeroStyles = styled.div`
   }
 
   .title {
-    font-size: 40px;
+    font-size: 35px;
     line-height: 100px;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
     font-weight: 800;

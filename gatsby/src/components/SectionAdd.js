@@ -30,28 +30,22 @@ const SectionAddStyles = styled.section`
   }
 
   .titleWrapper {
-    /* border-radius: 400px;
-    border: 9px solid var(--darkOrange);
-    display: inline-block;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 150px; */
   }
 
   .title {
     margin-top: 250px;
-    font-size: 84px;
-    line-height: 100px;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
     font-weight: 800;
     letter-spacing: -0.39px;
     display: block;
     color: white;
-    text-align: center;
     text-transform: uppercase;
+    font-size: 40px;
+    line-height: 55px;
+    ${({ theme }) => theme.media.mdAbove} {
+      font-size: 84px;
+      line-height: 100px;
+    }
   }
 `;
 
@@ -79,7 +73,7 @@ export default function SectionAdd() {
       <div className="wrapper">
         <BootsContainer>
           <div className="titleWrapper">
-            <h2 className="title">Razem po zwycięstwo</h2>
+            <h2 className="title">wygrywamy konkursy dotacyjne</h2>
           </div>
         </BootsContainer>
       </div>

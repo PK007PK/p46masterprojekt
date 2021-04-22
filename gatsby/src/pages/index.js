@@ -14,10 +14,10 @@ const IndexPage = ({ data }) => (
     <SEO />
     <main>
       <Hero videoSrcURL={data.cloudinaryMedia.url} />
-      {/* <SectionGrid /> */}
-      {/* <SectionLatestNews /> */}
-      {/* <SectionContestWon /> */}
-      {/* <SectionAdd /> */}
+      <SectionGrid />
+      <SectionLatestNews />
+      <SectionContestWon />
+      <SectionAdd />
     </main>
   </Layout>
 );

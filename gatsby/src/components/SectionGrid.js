@@ -6,16 +6,34 @@ import styled from 'styled-components';
 import { BootsContainer } from './BootsElements';
 
 const SectionGridStyles = styled.section`
-  padding: var(--sectionPadding);
+  padding: var(--sectionPaddingMob);
+
+  ${({ theme }) => theme.media.mdAbove} {
+    padding: var(--sectionPadding);
+  }
+
   .grid {
-    height: 100vh;
-    max-height: 700px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px 400px 400px;
     grid-template-areas:
-      'prep prep serv'
-      'obt fin serv';
+      'prep'
+      'obt'
+      'fin'
+      'serv';
+
+    ${({ theme }) => theme.media.mdAbove} {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 50% 50%;
+      grid-template-areas:
+        'prep prep serv'
+        'obt fin serv';
+    }
+
+    ${({ theme }) => theme.media.lgAbove} {
+      height: 100vh;
+      max-height: 700px;
+    }
   }
 
   .red {

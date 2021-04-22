@@ -5,7 +5,11 @@ import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
 import CardSimple from './CardSimple';
 
 const LatestNewsStyles = styled.section`
-  padding: var(--sectionPadding);
+  padding: var(--sectionPaddingMob);
+
+  ${({ theme }) => theme.media.mdAbove} {
+    padding: var(--sectionPadding);
+  }
 
   .readMoreWrapper {
     text-align: right;
@@ -27,7 +31,7 @@ export default function LatestNews() {
         <h2 className="leadTxt">Najnowsze informacje</h2>
         <p className="infoTxt">Aktualności, wydarzenia, konkursy</p>
         <BootsRow className="newsWrapper">
-          <BootsColumn md="4">
+          <BootsColumn sm="4">
             <CardSimple
               category="Aktualności"
               title="Zamknięcie działalności"
@@ -36,7 +40,7 @@ export default function LatestNews() {
               date="2020.12.11"
             />
           </BootsColumn>
-          <BootsColumn md="4">
+          <BootsColumn sm="4">
             <CardSimple
               category="Dotacje"
               title="Dotecje na innowacje"
@@ -45,7 +49,7 @@ export default function LatestNews() {
               date="2020.12.11"
             />
           </BootsColumn>
-          <BootsColumn md="4">
+          <BootsColumn sm="4">
             <CardSimple
               category="Dotacje"
               title="Bon na mleko zawsze z rana jak śmietana"

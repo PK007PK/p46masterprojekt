@@ -6,11 +6,17 @@ import CardGrant from './CardGrant';
 import { BootsContainer } from './BootsElements';
 
 const GridSectionStyles = styled.section`
-  padding: var(--sectionPadding);
+  padding: var(--sectionPaddingMob);
+
+  ${({ theme }) => theme.media.mdAbove} {
+    padding: var(--sectionPadding);
+  }
 
   .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    ${({ theme }) => theme.media.mdAbove} {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .readMoreWrapper {
