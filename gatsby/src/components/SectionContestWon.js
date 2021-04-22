@@ -35,7 +35,7 @@ export default function SectionContestWon() {
           Od 2002 roku obsługujemy naszych Klientów w zakresie aplikowania o
           dotacje inwestycyjne. Obszarem naszych zainteresowań są fundusze
           strukturalne UE oraz środki krajowe. Do chwili obecnej pozyskaliśmy
-          około 482 mln zł dotacji na blisko 180 projektów.
+          około 482 mln zł dotacji na blisko 180 projektów
         </p>
         <div className="grid">
           <CardGrant
