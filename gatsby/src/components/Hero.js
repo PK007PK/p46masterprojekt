@@ -9,6 +9,14 @@ const SectionHeroStyles = styled.div`
   position: relative;
   margin-top: -101px;
 
+  ${({ theme }) => theme.media.smAbove} {
+    margin-top: -128px;
+  }
+
+  ${({ theme }) => theme.media.lgAbove} {
+    margin-top: -101px;
+  }
+
   .darkWrapper {
     position: absolute;
     z-index: -1;
@@ -42,12 +50,20 @@ const SectionHeroStyles = styled.div`
   }
 
   .title {
-    font-size: 84px;
+    font-size: 40px;
     line-height: 100px;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
     font-weight: 800;
     letter-spacing: -0.39px;
     display: block;
+
+    ${({ theme }) => theme.media.smAbove} {
+      font-size: 60px;
+    }
+
+    ${({ theme }) => theme.media.mdAbove} {
+      font-size: 84px;
+    }
   }
 
   .start {
@@ -68,15 +84,20 @@ const SectionHeroStyles = styled.div`
   }
 
   .subtitle {
-    font-size: 20px;
-    line-height: 43px;
-    letter-spacing: 3px;
+    ${({ theme }) => theme.media.mdAbove} {
+      font-size: 20px;
+      line-height: 43px;
+      letter-spacing: 3px;
+    }
   }
 
   .funds {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 50px;
+
+    ${({ theme }) => theme.media.mdAbove} {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 `;
 
