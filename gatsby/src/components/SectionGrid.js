@@ -166,22 +166,22 @@ export default function SectionGrid() {
     {
       projects: file(name: { eq: "z1" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP, AVIF])
+          gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP])
         }
       }
       rozliczanie: file(name: { eq: "z2" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP, AVIF])
+          gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP])
         }
       }
       finances: file(name: { eq: "z3" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP, AVIF])
+          gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP])
         }
       }
       services: file(name: { eq: "z4" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP, AVIF])
+          gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP])
         }
       }
     }
