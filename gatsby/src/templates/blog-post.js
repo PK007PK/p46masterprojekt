@@ -1,16 +1,38 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-
-
 import BlockContent from '@sanity/block-content-to-react';
+import styled from 'styled-components';
+import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 
 import SEO from '../components/SEO';
+import { BootsContainer } from '../components/BootsElements';
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.sanityBlogPosts;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const { previous, next } = data;
+
+  const HeroBottomBarStyles = styled.div`
+    ${({ theme }) => theme.media.mdAbove} {
+      display: flex;
+      justify-content: space-between;
+    }
+    .subtitle {
+      ${({ theme }) => theme.media.mdAbove} {
+        font-size: 40px;
+        line-height: 43px;
+        letter-spacing: 3px;
+      }
+    }
+  `;
+
+  const heroBottomBar = () => (
+    <HeroBottomBarStyles>
+      <div className="subtitle">{post.name}</div>
+      <div>{post.date}</div>
+    </HeroBottomBarStyles>
+  );
 
   return (
     <Layout>
@@ -20,44 +42,48 @@ const BlogPostTemplate = ({ data }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{post.name}</h1>
-          <p>{post.date}</p>
-        </header>
-        <BlockContent
-          blocks={post._rawRichText}
-          dataset="production"
-          url=""
-          projectId="9311goma"
+        <Hero
+          // videoSrcURL={data.cloudinaryMedia.url}
+          bottomBar={heroBottomBar}
         />
-        <hr />
+        <BootsContainer className="sectionPaddings">
+          <BlockContent
+            blocks={post._rawRichText}
+            dataset="production"
+            url=""
+            projectId="10e4smak"
+          />
+          <hr />
+        </BootsContainer>
       </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={`/${previous.slug.current}`} rel="prev">
-                ← {previous.name}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={`/${next.slug.current}`} rel="next">
-                {next.name} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+      <BootsContainer>
+        <nav className="blog-post-nav">
+          <ul
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              justifyContent: `space-between`,
+              listStyle: `none`,
+              padding: 0,
+            }}
+          >
+            <li>
+              {previous && (
+                <Link to={`/${previous.slug.current}`} rel="prev">
+                  ← {previous.name}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={`/${next.slug.current}`} rel="next">
+                  {next.name} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </nav>
+      </BootsContainer>
     </Layout>
   );
 };

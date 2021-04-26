@@ -1,17 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaCheckDouble } from '@react-icons/all-files/fa/FaCheckDouble';
 import { BootsContainer } from './BootsElements';
 
 const FooterStyles = styled.footer`
   background-color: var(--darkTxt);
   color: white;
   padding: var(--cardPadding) 0;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a {
+    color: white;
+  }
 `;
 
 export default function Footer() {
   return (
     <FooterStyles>
-      <BootsContainer>Footer</BootsContainer>
+      <BootsContainer className="wrapper">
+        <p className="copyryght">
+          &copy; Masterprojekt S.C.
+          {new Date().getFullYear()}
+        </p>
+        <a href="https://krasny.netlify.app/programming" target="blank">
+          <p>
+            <FaCheckDouble style={{ marginRight: '5px' }} />
+            PK
+          </p>
+        </a>
+      </BootsContainer>
     </FooterStyles>
   );
 }

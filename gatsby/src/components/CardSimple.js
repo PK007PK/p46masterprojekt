@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../styles/Theme';
@@ -6,19 +7,54 @@ import { theme } from '../styles/Theme';
 const CardSimpleStyle = styled(Link)`
   display: block;
   background-color: var(--gray);
-  padding: var(--cardPadding);
-  min-height: 330px;
+  height: 330px;
   transition: var(--basicTransition);
+  position: relative;
+  overflow: hidden;
 
-  &:hover {
-    background-color: var(--darkOrange);
-    box-shadow: ${({ theme }) => theme.elevation.dp1};
+  .background {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transition: var(--basicTransition);
+    filter: saturate(30%);
+  }
+
+  &:hover .background {
+    transform: scale(1.1) rotate(1deg);
+  }
+
+  .darkBack {
+    z-index: 25;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .txt {
+    z-index: 50;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--cardPadding);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .category,
   .date {
     line-height: 1;
-    color: white;
     display: block;
     font-size: var(--smallSize);
   }
@@ -28,19 +64,41 @@ const CardSimpleStyle = styled(Link)`
     line-height: 1.3;
   }
 
-  /* &:hover .category,
-  &:hover .date {
-    color: var(--activeTxt);
-  } */
+  .lead {
+    font-size: 18px;
+    line-height: 1.3;
+  }
 `;
 
-export default function CardSimple({ title, subtitle, date, link, category }) {
+export default function CardSimple({
+  style,
+  title,
+  date,
+  link,
+  category,
+  className,
+  imgSrc,
+  lead,
+}) {
   return (
-    <CardSimpleStyle to={link}>
-      <p className="category">{category}</p>
-      <h3 className="title">{title}</h3>
-      <p className="date">{date}</p>
-      <p className="subtitle">{subtitle}</p>
+    <CardSimpleStyle to={link} style={style} className={className}>
+      <GatsbyImage
+        className="background"
+        image={imgSrc}
+        placeholder="blurred"
+        alt="Img"
+        layout="fullWidth"
+        formats={['auto', 'webp', 'avif']}
+      />
+      <div className="darkBack" />
+      <div className="txt">
+        <div>
+          <p className="category">{category}</p>
+          <h3 className="title">{title}</h3>
+          <p className="lead">{lead}</p>
+        </div>
+        <p className="date">{date}</p>
+      </div>
     </CardSimpleStyle>
   );
 }

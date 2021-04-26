@@ -51,14 +51,14 @@ export default function Pagination({
       <Link
         title="Prev Page"
         disabled={!hasPrevPage}
-        to={`${base}/${prevPage}`}
+        to={`${base}/${prevPage}#blog`}
       >
         ← <span className="word">Prev</span>
       </Link>
       {Array.from({ length: totalPages }).map((_, i) => (
         <Link
           className={currentPage === 1 && i === 0 ? 'current' : ''}
-          to={`${base}/${i >= 0 ? i + 1 : ''}`}
+          to={`${base}/${i >= 0 ? i + 1 : ''}#blog`}
           key={`page${i}`}
         >
           {i + 1}
@@ -67,7 +67,7 @@ export default function Pagination({
       <Link
         title="Next Page"
         disabled={!hasNextPage}
-        to={`${base}/${nextPage}`}
+        to={`${base}/${nextPage}#blog`}
       >
         <span className="word">Next</span> →
       </Link>

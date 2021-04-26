@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
-
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import { HiOutlineMenu as Burger } from '@react-icons/all-files/hi/HiOutlineMenu';
 import { ImExit as Exit } from '@react-icons/all-files/im/ImExit';
@@ -8,14 +7,12 @@ import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
 import Logo from '../assets/logo2.svg';
 
 const NavStyle = styled.nav`
-  z-index: 10;
   font-size: 1.4rem;
   text-transform: uppercase;
-  .logo {
-    svg {
-      margin-top: 8px;
-      z-index: 110;
-    }
+
+  .logoWrapper {
+    z-index: 150;
+    margin-top: 8px;
   }
 
   .desktopMenuList {
@@ -24,6 +21,7 @@ const NavStyle = styled.nav`
     ${({ theme }) => theme.media.mdAbove} {
       display: fiex;
       justify-content: flex-end;
+      z-index: 150;
     }
 
     li {
@@ -77,7 +75,7 @@ const NavStyle = styled.nav`
     }
   }
 
-  .menuColumn {
+  .menuDesktop {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -85,12 +83,11 @@ const NavStyle = styled.nav`
 `;
 
 const menuData = [
-  { id: 0, name: 'O nas', link: '/test' },
-  { id: 1, name: 'Dokonania', link: '/test' },
-  { id: 2, name: 'Oferta', link: '/test' },
-  { id: 3, name: 'Doświadczenie', link: '/test' },
-  { id: 4, name: 'Referencje', link: '/test' },
-  { id: 5, name: 'Kontakt', link: '/blog/1' },
+  { id: 0, name: 'Start', link: '/' },
+  { id: 1, name: 'Oferta', link: '/oferta' },
+  { id: 2, name: 'Blog', link: '/blog/1' },
+  { id: 3, name: 'Portfolio', link: '/portfolio' },
+  { id: 4, name: 'Kontakt', link: '/kontakt' },
 ];
 
 function MobileMenu() {
@@ -112,6 +109,16 @@ function MobileMenu() {
 }
 
 export default function Navbar() {
+  const data = useStaticQuery(graphql`
+    {
+      logo: file(name: { eq: "logo2pn" }) {
+        childImageSharp {
+          gatsbyImageData(formats: [PNG])
+        }
+      }
+    }
+  `);
+
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen((prevState) => !prevState);
@@ -126,16 +133,27 @@ export default function Navbar() {
     <NavStyle>
       <BootsContainer>
         <BootsRow>
-          <BootsColumn xxs="4" md="2">
-            <Link to="/" className="logo">
+          <BootsColumn xxs="4" md="2" className="logoWrapper">
+            <Link to="/">
               <Logo />
+              {/* <GatsbyImage
+                alt="logo"
+                image={data.logo.childImageSharp.gatsbyImageData}
+                style={{ marginTop: '10px', width: '142px', height: '58px' }}
+              />{' '} */}
             </Link>
           </BootsColumn>
-          <BootsColumn xxs="8" md="10" className="menuColumn">
+          <BootsColumn xxs="8" md="10" className="menuDesktop">
             <ul className="desktopMenuList">
               {menuData.map((item) => (
                 <li key={item.id}>
-                  <Link to={item.link}>{item.name}</Link>
+                  <Link
+                    to={item.link}
+                    activeStyle={{ color: 'rgba(255, 182, 72, 0.8)' }}
+                    className="fx-txt-underline"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>

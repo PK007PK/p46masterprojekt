@@ -14,7 +14,7 @@ const SectionHeroStyles = styled.div`
   }
 
   ${({ theme }) => theme.media.lgAbove} {
-    margin-top: -101px;
+    margin-top: -104px;
   }
 
   .darkWrapper {
@@ -91,17 +91,19 @@ const SectionHeroStyles = styled.div`
     }
   }
 
-  .funds {
+  .bottomBar {
     margin-bottom: 50px;
-
-    ${({ theme }) => theme.media.mdAbove} {
-      display: flex;
-      justify-content: space-between;
-    }
   }
 `;
 
-export default function SectionHero({ videoSrcURL, videoTitle, ...props }) {
+export default function SectionHero({
+  videoSrcURL,
+  videoTitle,
+  bottomBar,
+  ...props
+}) {
+  const BottomBar = bottomBar;
+
   return (
     <SectionHeroStyles>
       <div className="darkWrapper" />
@@ -121,11 +123,7 @@ export default function SectionHero({ videoSrcURL, videoTitle, ...props }) {
             aplikacyjne
           </p>
         </div>
-        <div className="funds">
-          <div className="subtitle">Fundusze Strukturalne</div>
-          <div className="subtitle">Programy krajowe</div>
-          <div className="subtitle">Fundusze EOG / "Norweskie"</div>
-        </div>
+        <div className="bottomBar">{BottomBar && <BottomBar />}</div>
       </BootsContainer>
     </SectionHeroStyles>
   );

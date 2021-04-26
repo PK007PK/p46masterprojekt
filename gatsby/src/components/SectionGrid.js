@@ -204,18 +204,17 @@ export default function SectionGrid() {
           <div className="red">
             <GridTile
               title="Przygotowanie projektów"
-              subtitle="Amet dolor labore mollit ad. Magna nostrud aliquip veniam cillum eu commodo labore"
-              link="/projekty"
+              subtitle="Wykonujemy pełną dokumentację aplikacyjną: wnioski, wybrane załączniki, studia wykonalności, biznes plany"
+              link="/oferta#dok"
               imgSrc={data.projects.childImageSharp.gatsbyImageData}
               alt="Img"
-              className="v1"
             />
           </div>
           <div className="blue">
             <GridTile
               title="Rozliczanie projektów"
-              subtitle="Amet dolor labore mollit ad. Magna nostrud aliquip veniam cillum eu commodo labore"
-              link="/rozliczanie"
+              subtitle="Rozliczamy kompleksowo projekty wybrane do dofinansowania. Przygotowujemy wymagane dokumenty, raporty i zestawienia. Monitorujemy zgodność realizacji projektu z dokumentacją. Sporządzamy wnioski o płatności"
+              link="/oferta#roz"
               imgSrc={data.rozliczanie.childImageSharp.gatsbyImageData}
               alt="Img"
             />
@@ -223,8 +222,8 @@ export default function SectionGrid() {
           <div className="yellow">
             <GridTile
               title="Analizy finansowe"
-              subtitle="Amet dolor labore mollit ad. Magna nostrud aliquip veniam cillum eu commodo labore"
-              link="/finanse"
+              subtitle="Analizy finansowe do dokumentacji aplikacyjnej: finansowe, ekonomiczne, wrażliwości, ryzyka, przygotowanie aktywnego arkusza MsExcel, zmiany i poprawki na wszystkich etapach oceny"
+              link="/oferta#fin"
               imgSrc={data.finances.childImageSharp.gatsbyImageData}
               alt="Img"
             />
@@ -232,8 +231,9 @@ export default function SectionGrid() {
           <div className="navy">
             <GridTile
               title="Stała obsługa"
-              subtitle="Amet dolor labore mollit ad. Magna nostrud aliquip veniam cillum eu commodo labore"
-              link="/obsluga"
+              subtitle="Usługa swoim zakresem obejmują wszystko, co istotne dla
+              skutecznego korzystania ze środków preferencyjnych. Stała obsługa w oparciu o abonament."
+              link="/oferta#obs"
               imgSrc={data.services.childImageSharp.gatsbyImageData}
               alt="Img"
             />

@@ -5,7 +5,7 @@ import CardGrant from './CardGrant';
 
 import { BootsContainer } from './BootsElements';
 
-const GridSectionStyles = styled.section`
+const PortfolioSectionStyles = styled.section`
   padding: var(--sectionPaddingMob);
 
   ${({ theme }) => theme.media.mdAbove} {
@@ -17,6 +17,10 @@ const GridSectionStyles = styled.section`
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+  }
+
+  .title {
+    margin-bottom: 50px;
   }
 
   .readMoreWrapper {
@@ -32,19 +36,13 @@ const GridSectionStyles = styled.section`
   }
 `;
 
-export default function SectionContestWon({ data }) {
+export default function SectionPortfolio({ data }) {
   return (
-    <GridSectionStyles>
+    <PortfolioSectionStyles>
       <BootsContainer className="wrapper">
-        <h2 className="leadTxt">Wygrane konkursy</h2>
-        <p className="infoTxt">
-          Od 2002 roku obsługujemy naszych Klientów w zakresie aplikowania o
-          dotacje inwestycyjne. Obszarem naszych zainteresowań są fundusze
-          strukturalne UE oraz środki krajowe. Do chwili obecnej pozyskaliśmy
-          około 482 mln zł dotacji na blisko 180 projektów
-        </p>
+        <h2 className="leadTxt title">Wygrane konkursy</h2>
         <div className="grid">
-          {data.slice(0, 4).map((item, index) => (
+          {data.map((item, index) => (
             <CardGrant
               key={index}
               title={item.projekt}
@@ -53,10 +51,7 @@ export default function SectionContestWon({ data }) {
             />
           ))}
         </div>
-        <div className="readMoreWrapper">
-          <Link to="/portfolio">Zobacz wszystkie wygrane konkursy</Link>
-        </div>
       </BootsContainer>
-    </GridSectionStyles>
+    </PortfolioSectionStyles>
   );
 }
