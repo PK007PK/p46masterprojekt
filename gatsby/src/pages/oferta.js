@@ -84,7 +84,10 @@ const PageStyling = styled.main`
 const Offer = ({ data }) => (
   <Layout>
     <SEO title="Oferta" />
-    {/* <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} /> */}
+    <Hero
+      videoSrcURL={data.cloudinaryMedia.secure_url}
+      bottomBar={heroBottomBar}
+    />
     <PageStyling>
       <BootsContainer>
         <BootsRow className="sectionPaddings">
@@ -422,7 +425,7 @@ const Offer = ({ data }) => (
 export const pageQuery = graphql`
   {
     cloudinaryMedia(public_id: { eq: "blurry_cw7p2n" }) {
-      url
+      secure_url
     }
   }
 `;

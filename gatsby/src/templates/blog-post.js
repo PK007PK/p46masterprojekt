@@ -43,7 +43,7 @@ const BlogPostTemplate = ({ data }) => {
         itemType="http://schema.org/Article"
       >
         <Hero
-          // videoSrcURL={data.cloudinaryMedia.url}
+          videoSrcURL={data.cloudinaryMedia.secure_url}
           bottomBar={heroBottomBar}
         />
         <BootsContainer className="sectionPaddings">
@@ -96,6 +96,9 @@ export const pageQuery = graphql`
     $previousPostId: String
     $nextPostId: String
   ) {
+    cloudinaryMedia(public_id: { eq: "blurry_cw7p2n" }) {
+      secure_url
+    }
     site {
       siteMetadata {
         title

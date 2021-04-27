@@ -31,7 +31,10 @@ const heroBottomBar = () => (
 const Portfolio = ({ data }) => (
   <Layout>
     <SEO title="Portfolio" />
-    {/* <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} /> */}
+    <Hero
+      videoSrcURL={data.cloudinaryMedia.secure_url}
+      bottomBar={heroBottomBar}
+    />
     <SectionPortfolio data={subsidies} />
     <main />
   </Layout>
@@ -40,7 +43,7 @@ const Portfolio = ({ data }) => (
 export const pageQuery = graphql`
   {
     cloudinaryMedia(public_id: { eq: "blurry_cw7p2n" }) {
-      url
+      secure_url
     }
   }
 `;

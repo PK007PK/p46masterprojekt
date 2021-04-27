@@ -37,7 +37,10 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Strona główna" />
     <main>
-      {/* <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} /> */}
+      <Hero
+        videoSrcURL={data.cloudinaryMedia.secure_url}
+        bottomBar={heroBottomBar}
+      />
       <SectionGrid />
       <SectionLatestNews data={data.allSanityBlogPosts.nodes} />
       <SectionContestWon data={subsidies} />
@@ -49,7 +52,7 @@ const IndexPage = ({ data }) => (
 export const pageQuery = graphql`
   query MyQuery {
     cloudinaryMedia(public_id: { eq: "blurry_cw7p2n" }) {
-      url
+      secure_url
     }
     allSanityBlogPosts(limit: 3, sort: { fields: [date], order: DESC }) {
       nodes {

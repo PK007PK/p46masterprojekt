@@ -29,7 +29,10 @@ const heroBottomBar = () => (
 const AboutUs = ({ data }) => (
   <Layout>
     <SEO />
-    {/* <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} /> */}
+    <Hero
+      videoSrcURL={data.cloudinaryMedia.secure_url}
+      bottomBar={heroBottomBar}
+    />
     <main />
   </Layout>
 );
@@ -37,7 +40,7 @@ const AboutUs = ({ data }) => (
 export const pageQuery = graphql`
   {
     cloudinaryMedia(public_id: { eq: "blurry_cw7p2n" }) {
-      url
+      secure_url
     }
   }
 `;

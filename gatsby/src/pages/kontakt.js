@@ -30,7 +30,10 @@ const heroBottomBar = () => (
 const Kontakt = ({ data }) => (
   <Layout>
     <SEO title="Kontakt" />
-    {/* <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} /> */}
+    <Hero
+      videoSrcURL={data.cloudinaryMedia.secure_url}
+      bottomBar={heroBottomBar}
+    />
     <main>
       <BootsContainer className="sectionPaddings">
         <h2 id="blog" className="leadTxt">
@@ -53,7 +56,7 @@ const Kontakt = ({ data }) => (
 export const pageQuery = graphql`
   {
     cloudinaryMedia(public_id: { eq: "blurry_cw7p2n" }) {
-      url
+      secure_url
     }
   }
 `;
