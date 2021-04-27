@@ -213,7 +213,7 @@ export default function SectionGrid() {
           <div className="blue">
             <GridTile
               title="Rozliczanie projektów"
-              subtitle="Rozliczamy kompleksowo projekty wybrane do dofinansowania. Przygotowujemy wymagane dokumenty, raporty i zestawienia. Monitorujemy zgodność realizacji projektu z dokumentacją. Sporządzamy wnioski o płatności"
+              subtitle="Rozliczamy kompleksowo projekty wybrane do dofinansowania. Sporządzamy wnioski o płatności. Monitorujemy zgodność z dokumentacją "
               link="/oferta#roz"
               imgSrc={data.rozliczanie.childImageSharp.gatsbyImageData}
               alt="Img"
@@ -222,7 +222,7 @@ export default function SectionGrid() {
           <div className="yellow">
             <GridTile
               title="Analizy finansowe"
-              subtitle="Analizy finansowe do dokumentacji aplikacyjnej: finansowe, ekonomiczne, wrażliwości, ryzyka, przygotowanie aktywnego arkusza MsExcel, zmiany i poprawki na wszystkich etapach oceny"
+              subtitle="Analizy finansowe do dokumentacji aplikacyjnej: finansowe, ekonomiczne, wrażliwości, ryzyka..."
               link="/oferta#fin"
               imgSrc={data.finances.childImageSharp.gatsbyImageData}
               alt="Img"
