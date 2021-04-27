@@ -143,9 +143,9 @@ function GridTile({ title, link, imgSrc, subtitle }) {
           className="background"
           image={imgSrc}
           placeholder="blurred"
-          alt="Img"
+          alt="background"
           layout="fullWidth"
-          formats={['auto', 'webp', 'avif']}
+          formats={['auto', 'webp']}
         />
         <div className="txt">
           <div>
@@ -204,7 +204,7 @@ export default function SectionGrid() {
           <div className="red">
             <GridTile
               title="Przygotowanie projektów"
-              subtitle="Wykonujemy pełną dokumentację aplikacyjną: wnioski, wybrane załączniki, studia wykonalności, biznes plany"
+              subtitle="Wykonujemy pełną dokumentację aplikacyjną: wnioski, załączniki, studia wykonalności..."
               link="/oferta#dok"
               imgSrc={data.projects.childImageSharp.gatsbyImageData}
               alt="Img"
@@ -213,7 +213,7 @@ export default function SectionGrid() {
           <div className="blue">
             <GridTile
               title="Rozliczanie projektów"
-              subtitle="Rozliczamy kompleksowo projekty wybrane do dofinansowania. Sporządzamy wnioski o płatności. Monitorujemy zgodność z dokumentacją "
+              subtitle="Rozliczamy kompleksowo projekty wybrane do dofinansowania"
               link="/oferta#roz"
               imgSrc={data.rozliczanie.childImageSharp.gatsbyImageData}
               alt="Img"
@@ -232,7 +232,7 @@ export default function SectionGrid() {
             <GridTile
               title="Stała obsługa"
               subtitle="Usługa swoim zakresem obejmują wszystko, co istotne dla
-              skutecznego korzystania ze środków preferencyjnych. Stała obsługa w oparciu o abonament."
+              skutecznego korzystania ze środków preferencyjnych. Stała obsługa w oparciu o abonament"
               link="/oferta#obs"
               imgSrc={data.services.childImageSharp.gatsbyImageData}
               alt="Img"

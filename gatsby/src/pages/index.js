@@ -64,7 +64,7 @@ export const pageQuery = graphql`
         }
         image {
           asset {
-            gatsbyImageData
+            gatsbyImageData(width: 350)
           }
         }
       }

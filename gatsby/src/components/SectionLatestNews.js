@@ -25,7 +25,6 @@ const LatestNewsStyles = styled.section`
 `;
 
 export default function LatestNews({ data }) {
-  console.log(data);
   return (
     <LatestNewsStyles>
       <BootsContainer>
