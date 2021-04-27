@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@400;800&display=swap');
 /* @font-face {
     font-family: 'roboto';
     src: url('/assets/fonts/Roboto-Medium.woff2')
