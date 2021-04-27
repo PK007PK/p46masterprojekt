@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../styles/Theme';
@@ -86,9 +86,9 @@ export default function CardSimple({
         className="background"
         image={imgSrc}
         placeholder="blurred"
-        alt="Img"
-        layout="fullWidth"
-        formats={['auto', 'webp', 'avif']}
+        alt={title}
+        formats={['auto', 'webp']}
+        quality={50}
       />
       <div className="darkBack" />
       <div className="txt">

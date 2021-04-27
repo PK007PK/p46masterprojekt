@@ -10,6 +10,8 @@ export default {
 
   flags: { DEV_SSR: true },
   plugins: [
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     `gatsby-plugin-image`,
     'gatsby-plugin-styled-components',
     {
@@ -73,7 +75,6 @@ export default {
       },
     },
     `gatsby-remark-copy-linked-files`,
-    'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
@@ -83,7 +84,6 @@ export default {
     //     icon: "src/images/icon.png",
     //   },
     // },
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
