@@ -21,7 +21,7 @@ const SEO = ({ children, location, title, image }) => {
       {/* CSS */}
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@400;600;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@400;800&display=swap"
         rel="stylesheet"
       />
       {/* Fav Icons */}
