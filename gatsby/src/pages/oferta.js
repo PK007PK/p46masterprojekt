@@ -84,7 +84,7 @@ const PageStyling = styled.main`
 const Offer = ({ data }) => (
   <Layout>
     <SEO title="Oferta" />
-    <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} />
+    {/* <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} /> */}
     <PageStyling>
       <BootsContainer>
         <BootsRow className="sectionPaddings">

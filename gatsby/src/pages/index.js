@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Strona główna" />
     <main>
-      <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} />
+      {/* <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} /> */}
       <SectionGrid />
       <SectionLatestNews data={data.allSanityBlogPosts.nodes} />
       <SectionContestWon data={subsidies} />

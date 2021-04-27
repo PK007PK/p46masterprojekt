@@ -29,7 +29,7 @@ const heroBottomBar = () => (
 const AboutUs = ({ data }) => (
   <Layout>
     <SEO />
-    <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} />
+    {/* <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} /> */}
     <main />
   </Layout>
 );

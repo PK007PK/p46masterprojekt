@@ -31,7 +31,7 @@ const heroBottomBar = () => (
 const Portfolio = ({ data }) => (
   <Layout>
     <SEO title="Portfolio" />
-    <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} />
+    {/* <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} /> */}
     <SectionPortfolio data={subsidies} />
     <main />
   </Layout>

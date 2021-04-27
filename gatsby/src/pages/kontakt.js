@@ -30,7 +30,7 @@ const heroBottomBar = () => (
 const Kontakt = ({ data }) => (
   <Layout>
     <SEO title="Kontakt" />
-    <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} />
+    {/* <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} /> */}
     <main>
       <BootsContainer className="sectionPaddings">
         <h2 id="blog" className="leadTxt">

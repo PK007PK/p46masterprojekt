@@ -86,7 +86,7 @@ const BlogPage = ({ data, pageContext }) => {
           pageContext.sellectionName ? `| ${pageContext.sellectionName}` : ''
         } ${pageContext.currentPage ? `| ${pageContext.currentPage}` : ''}`}
       />
-      <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} />
+      {/* <Hero videoSrcURL={data.cloudinaryMedia.url} bottomBar={heroBottomBar} /> */}
       <BootsContainer className="sectionPaddings">
         <BootsRow>
           <BootsColumn md={10} lg={9}>
