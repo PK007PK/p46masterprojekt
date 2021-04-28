@@ -6,12 +6,49 @@ import { ImExit as Exit } from '@react-icons/all-files/im/ImExit';
 import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
 import Logo from '../assets/logo2.svg';
 
+const menuData = [
+  { id: 0, name: 'Start', link: '/' },
+  { id: 1, name: 'Oferta', link: '/oferta' },
+  { id: 2, name: 'Blog', link: '/blog/1' },
+  { id: 3, name: 'Portfolio', link: '/portfolio' },
+  { id: 4, name: 'Kontakt', link: '/kontakt' },
+];
+
+const MobileMenuStyle = styled.div``;
+
+function MobileMenu({ clickBtn }) {
+  return (
+    <MobileMenuStyle>
+      <BootsContainer className="mobileMenu">
+        <BootsRow>
+          <BootsColumn xxs="4" md="2" className="logoWrapper">
+            <Link to="/">
+              <Logo />
+            </Link>
+          </BootsColumn>
+          <BootsColumn xxs="8" md="10" className="menuDesktop">
+            <button type="button" className="burgerButton" onClick={clickBtn}>
+              <Exit style={{ color: 'white', marginTop: '15px' }} />
+            </button>
+          </BootsColumn>
+        </BootsRow>
+        <ul className="mobileMenuList">
+          {menuData.map((item) => (
+            <li key={item.id}>
+              <Link to={item.link}>{item.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </BootsContainer>
+    </MobileMenuStyle>
+  );
+}
+
 const NavStyle = styled.nav`
   font-size: 1.4rem;
   text-transform: uppercase;
 
   .logoWrapper {
-    z-index: 150;
     margin-top: 8px;
   }
 
@@ -33,7 +70,7 @@ const NavStyle = styled.nav`
     }
   }
 
-  .mobileButton {
+  .burgerButton {
     z-index: 100;
     display: flex;
     justify-content: center;
@@ -57,7 +94,7 @@ const NavStyle = styled.nav`
     left: 0;
     min-width: 100%;
     height: 100vh;
-    z-index: 50;
+    z-index: 150;
     background-color: black;
     color: white;
   }
@@ -82,32 +119,6 @@ const NavStyle = styled.nav`
   }
 `;
 
-const menuData = [
-  { id: 0, name: 'Start', link: '/' },
-  { id: 1, name: 'Oferta', link: '/oferta' },
-  { id: 2, name: 'Blog', link: '/blog/1' },
-  { id: 3, name: 'Portfolio', link: '/portfolio' },
-  { id: 4, name: 'Kontakt', link: '/kontakt' },
-];
-
-function MobileMenu() {
-  return (
-    <BootsContainer className="mobileMenu">
-      <BootsRow>
-        <BootsColumn>
-          <ul className="mobileMenuList">
-            {menuData.map((item) => (
-              <li key={item.id}>
-                <Link to={item.link}>{item.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </BootsColumn>
-      </BootsRow>
-    </BootsContainer>
-  );
-}
-
 export default function Navbar() {
   const data = useStaticQuery(graphql`
     {
@@ -120,13 +131,9 @@ export default function Navbar() {
   `);
 
   const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
+
+  const handleButtonClick = () => {
     setIsOpen((prevState) => !prevState);
-    if (isOpen) {
-      document.body.style.overflow = 'visible';
-    } else {
-      document.body.style.overflow = 'hidden';
-    }
   };
 
   return (
@@ -136,11 +143,6 @@ export default function Navbar() {
           <BootsColumn xxs="4" md="2" className="logoWrapper">
             <Link to="/">
               <Logo />
-              {/* <GatsbyImage
-                alt="logo"
-                image={data.logo.childImageSharp.gatsbyImageData}
-                style={{ marginTop: '10px', width: '142px', height: '58px' }}
-              />{' '} */}
             </Link>
           </BootsColumn>
           <BootsColumn xxs="8" md="10" className="menuDesktop">
@@ -159,16 +161,12 @@ export default function Navbar() {
             </ul>
             <button
               type="button"
-              className="mobileButton"
-              onClick={handleClick}
+              className="burgerButton"
+              onClick={handleButtonClick}
             >
-              {isOpen ? (
-                <Exit style={{ color: 'white', marginTop: '15px' }} />
-              ) : (
-                <Burger style={{ color: 'white', marginTop: '15px' }} />
-              )}
+              <Burger style={{ color: 'white', marginTop: '15px' }} />
             </button>
-            {isOpen && <MobileMenu />}
+            {isOpen && <MobileMenu clickBtn={handleButtonClick} />}
           </BootsColumn>
         </BootsRow>
       </BootsContainer>
