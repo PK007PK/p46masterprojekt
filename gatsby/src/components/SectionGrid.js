@@ -21,6 +21,7 @@ const SectionGridStyles = styled.section`
       'obt'
       'fin'
       'serv';
+    grid-gap: 20px;
 
     ${({ theme }) => theme.media.mdAbove} {
       grid-template-columns: 1fr 1fr 1fr;
@@ -28,6 +29,7 @@ const SectionGridStyles = styled.section`
       grid-template-areas:
         'prep prep serv'
         'obt fin serv';
+      grid-gap: 0px;
     }
 
     ${({ theme }) => theme.media.lgAbove} {

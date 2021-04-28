@@ -32,7 +32,7 @@ export default function LatestNews({ data }) {
         <p className="infoTxt">Aktualności, wydarzenia, konkursy</p>
         <BootsRow className="newsWrapper">
           {data.map((item, index) => (
-            <BootsColumn sm="4" key={index}>
+            <BootsColumn md="4" key={index}>
               <CardSimple
                 category="Aktualności"
                 title={item.name}
