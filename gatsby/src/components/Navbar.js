@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { HiOutlineMenu as Burger } from '@react-icons/all-files/hi/HiOutlineMenu';
 import { ImExit as Exit } from '@react-icons/all-files/im/ImExit';
 import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
-import Logo from '../assets/logo2.svg';
+import { logoCode } from '../assets/logoCode';
 
 const menuData = [
   { id: 0, name: 'Start', link: '/' },
@@ -14,16 +14,42 @@ const menuData = [
   { id: 4, name: 'Kontakt', link: '/kontakt' },
 ];
 
-const MobileMenuStyle = styled.div``;
+const MobileMenuStyle = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100vh;
+  z-index: 150;
+  background-color: black;
+  color: white;
+
+  .mobileMenuList {
+    margin-top: 100px;
+    text-align: center;
+
+    li {
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: white;
+    }
+  }
+`;
 
 function MobileMenu({ clickBtn }) {
   return (
     <MobileMenuStyle>
-      <BootsContainer className="mobileMenu">
+      <BootsContainer>
         <BootsRow>
           <BootsColumn xxs="4" md="2" className="logoWrapper">
             <Link to="/">
-              <Logo />
+              <img
+                style={{ display: 'block', width: '100px' }}
+                alt="Masterprojekt Logo"
+                src={logoCode}
+              />
             </Link>
           </BootsColumn>
           <BootsColumn xxs="8" md="10" className="menuDesktop">
@@ -45,18 +71,20 @@ function MobileMenu({ clickBtn }) {
 }
 
 const NavStyle = styled.nav`
+  z-index: 200;
   font-size: 1.4rem;
   text-transform: uppercase;
 
   .logoWrapper {
     margin-top: 8px;
+    z-index: 150;
   }
 
   .desktopMenuList {
     display: none;
 
     ${({ theme }) => theme.media.mdAbove} {
-      display: fiex;
+      display: flex;
       justify-content: flex-end;
       z-index: 150;
     }
@@ -77,6 +105,7 @@ const NavStyle = styled.nav`
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
     border: none;
+    cursor: pointer;
 
     ${({ theme }) => theme.media.mdAbove} {
       display: none;
@@ -85,30 +114,6 @@ const NavStyle = styled.nav`
     & > * {
       width: 25px;
       height: 25px;
-    }
-  }
-
-  .mobileMenu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 100vh;
-    z-index: 150;
-    background-color: black;
-    color: white;
-  }
-
-  .mobileMenuList {
-    margin-top: 100px;
-    text-align: center;
-
-    li {
-      margin-bottom: 1.5rem;
-    }
-
-    a {
-      color: white;
     }
   }
 
@@ -142,7 +147,11 @@ export default function Navbar() {
         <BootsRow>
           <BootsColumn xxs="4" md="2" className="logoWrapper">
             <Link to="/">
-              <Logo />
+              <img
+                style={{ display: 'block', width: '100px' }}
+                alt="Masterprojekt Logo"
+                src={logoCode}
+              />
             </Link>
           </BootsColumn>
           <BootsColumn xxs="8" md="10" className="menuDesktop">

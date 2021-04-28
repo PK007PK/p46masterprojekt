@@ -14,7 +14,7 @@ const SectionHeroStyles = styled.div`
   }
 
   ${({ theme }) => theme.media.lgAbove} {
-    margin-top: -104px;
+    margin-top: -95px;
   }
 
   .darkWrapper {
