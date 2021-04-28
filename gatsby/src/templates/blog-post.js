@@ -25,12 +25,16 @@ const BlogPostTemplate = ({ data }) => {
         letter-spacing: 3px;
       }
     }
+
+    .data {
+      min-width: 100px;
+    }
   `;
 
   const heroBottomBar = () => (
     <HeroBottomBarStyles>
       <div className="subtitle">{post.name}</div>
-      <div>{post.date}</div>
+      <div className="data">{post.date}</div>
     </HeroBottomBarStyles>
   );
 
@@ -46,7 +50,7 @@ const BlogPostTemplate = ({ data }) => {
           videoSrcURL={data.cloudinaryMedia.secure_url}
           bottomBar={heroBottomBar}
         />
-        <BootsContainer className="sectionPaddings">
+        <BootsContainer className="sectionPaddings" style={{ padding: '10px' }}>
           <BlockContent
             blocks={post._rawRichText}
             dataset="production"
