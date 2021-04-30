@@ -26,7 +26,7 @@ const SectionHeroStyles = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .txtWrapper {
@@ -44,7 +44,7 @@ const SectionHeroStyles = styled.div`
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    filter: saturate(30%);
+    /* filter: saturate(70%); */
   }
 
   .motto {
