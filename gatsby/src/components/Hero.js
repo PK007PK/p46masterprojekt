@@ -109,6 +109,7 @@ export default function SectionHero({
   useEffect(() => {
     setTimeout(() => setIsMounted({ isMounted: true }), 150);
   }, []);
+  console.log(videoSrcURL)
 
   return (
     <SectionHeroStyles>
