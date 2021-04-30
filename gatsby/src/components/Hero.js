@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { BootsContainer } from './BootsElements';
 
@@ -102,14 +102,21 @@ export default function SectionHero({
   bottomBar,
   ...props
 }) {
+  const [isMounted, setIsMounted] = useState(false);
   const BottomBar = bottomBar;
+
+  useEffect(() => {
+    setTimeout(() => setIsMounted({ isMounted: true }), 500);
+  }, []);
 
   return (
     <SectionHeroStyles>
       <div className="darkWrapper" />
-      <video autoPlay muted loop className="myVideo">
-        <source src={videoSrcURL} type="video/mp4" />
-      </video>
+      {isMounted && (
+        <video autoPlay muted loop className="myVideo">
+          <source src={videoSrcURL} type="video/mp4" />
+        </video>
+      )}
       <BootsContainer className="txtWrapper">
         <div />
         <div className="motto">
