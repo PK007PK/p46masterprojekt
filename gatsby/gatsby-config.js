@@ -26,6 +26,18 @@ export default {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Masterprojekt S.C.`,
+        short_name: `Masterprojekt S.C.`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#1C2331`,
+        display: `minimal-ui`,
+        icon: `src/assets/logo4.svg`,
+      },
+    },
+    {
       resolve: `gatsby-source-sanity`,
       options: {
         projectId: `10e4smak`,
