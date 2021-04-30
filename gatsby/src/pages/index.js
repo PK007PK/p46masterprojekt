@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query MyQuery {
-    cloudinaryMedia(public_id: { eq: "FinalBackWebM_fvagsq" }) {
+    cloudinaryMedia(public_id: { eq: "Back3" }) {
       secure_url
     }
     allSanityBlogPosts(limit: 3, sort: { fields: [date], order: DESC }) {
