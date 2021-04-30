@@ -54,7 +54,7 @@ export default function SectionAdd() {
     {
       together: file(name: { eq: "together2" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP, AVIF])
+          gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP])
         }
       }
     }
@@ -66,9 +66,9 @@ export default function SectionAdd() {
         className="background"
         image={data.together.childImageSharp.gatsbyImageData}
         placeholder="blurred"
-        alt="Img"
+        alt="Background img"
         layout="fullWidth"
-        formats={['auto', 'webp', 'avif']}
+        formats={['auto', 'webp']}
       />
       <div className="wrapper">
         <BootsContainer>
