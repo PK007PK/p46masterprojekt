@@ -25,8 +25,8 @@ const SEO = ({ children, location, title, image }) => {
         rel="stylesheet"
       /> */}
       {/* Fav Icons */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="alternate icon" href="/favicon.ico" />
+      {/* <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="alternate icon" href="/favicon.ico" /> */}
 
       {/* Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -4,7 +4,7 @@ import { BootsContainer } from './BootsElements';
 
 const SectionHeroStyles = styled.div`
   height: 105vh;
-  max-height: 800px;
+  max-height: 1100px;
   color: white;
   position: relative;
   margin-top: -101px;
@@ -106,7 +106,7 @@ export default function SectionHero({
   const BottomBar = bottomBar;
 
   useEffect(() => {
-    setTimeout(() => setIsMounted({ isMounted: true }), 500);
+    setTimeout(() => setIsMounted({ isMounted: true }), 150);
   }, []);
 
   return (
