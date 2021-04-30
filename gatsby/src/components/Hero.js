@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import { BootsContainer } from './BootsElements';
 
 const SectionHeroStyles = styled.div`
+  z-index: -3;
   height: 105vh;
   max-height: 1100px;
   color: white;
   position: relative;
   margin-top: -101px;
+  background-color: black;
 
   ${({ theme }) => theme.media.smAbove} {
     margin-top: -128px;
