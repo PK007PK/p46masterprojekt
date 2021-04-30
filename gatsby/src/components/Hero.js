@@ -44,7 +44,6 @@ const SectionHeroStyles = styled.div`
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    /* filter: saturate(70%); */
   }
 
   .motto {
