@@ -424,7 +424,7 @@ const Offer = ({ data }) => (
 
 export const pageQuery = graphql`
   {
-    cloudinaryMedia(public_id: { eq: "blurry_cw7p2n" }) {
+    cloudinaryMedia(public_id: { eq: "Back3" }) {
       secure_url
     }
   }
