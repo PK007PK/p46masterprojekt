@@ -41,7 +41,7 @@ const CardSimpleStyle = styled(Link)`
   }
 
   &:hover .darkBack {
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: var(--darkTxt);
   }
 
   .txt {

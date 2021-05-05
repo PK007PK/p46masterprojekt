@@ -6,7 +6,7 @@ import { BootsContainer } from './BootsElements';
 const FooterStyles = styled.footer`
   background-color: var(--darkTxt);
   color: white;
-  padding: var(--cardPadding) 0;
+  padding: 30px 0;
 
   .wrapper {
     display: flex;
@@ -15,6 +15,10 @@ const FooterStyles = styled.footer`
 
   a {
     color: white;
+  }
+
+  p {
+    margin: 0;
   }
 `;
 

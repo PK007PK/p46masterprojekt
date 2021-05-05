@@ -14,7 +14,7 @@ import {
   BootsRow,
 } from '../components/BootsElements';
 import projectConfig from '../projectConfig';
-import CardSimple from '../components/CardSimple';
+import CardBlog from '../components/CardBlog';
 
 const HeroBottomBarStyles = styled.div`
   ${({ theme }) => theme.media.mdAbove} {
@@ -60,12 +60,12 @@ const BlogPage = ({ data, pageContext }) => {
   }
 
   const DisplayPosts = () => (
-    <ul style={{ listStyle: `none`, paddingLeft: 0 }}>
+    <ul style={{ listStyle: `none`, paddingLeft: 0, marginTop: 0 }}>
       {postsToDisplay.nodes
         .filter((post) => post.date !== null)
         .map((post) => (
           <li key={post.slug.current}>
-            <CardSimple
+            <CardBlog
               title={post.name}
               subtitle={post.lead}
               date={post.date}
@@ -79,6 +79,11 @@ const BlogPage = ({ data, pageContext }) => {
     </ul>
   );
 
+  const FilterContainer = styled.div`
+    padding-top: 40px;
+    height: calc(100% - 20px);
+  `;
+
   return (
     <Layout>
       <SEO
@@ -91,21 +96,16 @@ const BlogPage = ({ data, pageContext }) => {
         bottomBar={heroBottomBar}
         secondary
       />
-      <BootsContainer className="sectionPaddings">
-        <BootsRow>
-          <BootsColumn md={10} lg={9}>
-            <h2 id="blog" className="leadTxt">
-              Informacje
-            </h2>
-          </BootsColumn>
-        </BootsRow>
+      <BootsContainer style={{ marginTop: '60px' }}>
         <BootsRow>
           <BootsColumn md={10} lg={9}>
             <DisplayPosts />
           </BootsColumn>
           <BootsColumn md={2} lg={3}>
-            <CategoryFilter />
-            <TagsFilter />
+            <FilterContainer>
+              <CategoryFilter />
+              <TagsFilter />
+            </FilterContainer>
           </BootsColumn>
         </BootsRow>
         <Pagination
