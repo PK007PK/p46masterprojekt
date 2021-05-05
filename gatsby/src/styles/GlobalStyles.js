@@ -17,17 +17,20 @@ html {
 /* Variables:  */
     /* Colors */
     --red: rgba(255, 138, 101, 1);
+    --red2: #FFCCBC;
     --redTransp: rgba(255, 138, 101, 0.3);
     --black: #393939;
     --grey: #8d99ae;
     --gray: var(--grey);
+    --grey2: #78909C;
     --darkOrange: rgba(255, 182, 72, 0.8);
     --lightGrey: #e1e1e1;
     --lightGray: var(--lightGrey);
     --offWhite: #ededed;
     --maxWidth: #1000px;
     --darkTxt: #252525;
-    --activeTxt: #f26522;
+    /* --activeTxt: #f26522; */
+    --activeTxt: var(--darkOrange);
 
     /* Spacings */
     --sectionPaddingMob: 75px 0px 0px 0px;

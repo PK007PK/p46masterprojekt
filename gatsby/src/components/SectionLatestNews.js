@@ -13,13 +13,13 @@ const LatestNewsStyles = styled.section`
 
   .readMoreWrapper {
     text-align: right;
-    margin-top: 50px;
+    margin-top: 30px;
 
     a {
       line-height: 1;
-      color: var(--activeTxt);
+      /* color: var(--activeTxt); */
       font-size: var(--headingSize);
-      margin-right: var(--cardPadding);
+      /* margin-right: var(--cardPadding); */
     }
   }
 `;

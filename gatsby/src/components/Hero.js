@@ -14,7 +14,7 @@ const SectionHeroStyles = styled.div`
   ${({ secondary }) =>
     secondary &&
     css`
-      background-color: var(--redTransp);
+      background-color: var(--grey2);
     `}
 
   ${({ theme }) => theme.media.smAbove} {
@@ -111,7 +111,7 @@ const SectionHeroStyles = styled.div`
     ${({ secondary }) =>
       secondary &&
       css`
-        background-color: var(--darkTxt);
+        background-color: var(--darkOrange);
         padding: 40px 40px;
       `}
   }
