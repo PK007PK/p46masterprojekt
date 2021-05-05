@@ -44,7 +44,7 @@ export default function LatestNews({ data }) {
             </BootsColumn>
           ))}
         </BootsRow>
-        <BootsRow>
+        <BootsRow style={{ marginTop: '25px' }}>
           <BootsColumn md="8" />
           <BootsColumn md="4">
             <Button to="/blog/1">Zobacz wszystkie wpisy</Button>

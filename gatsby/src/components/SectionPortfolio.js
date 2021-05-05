@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CardGrant from './CardGrant';
 
-import { BootsContainer } from './BootsElements';
+import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
 
 const PortfolioSectionStyles = styled.section`
   padding: var(--sectionPaddingMob);
@@ -41,16 +41,17 @@ export default function SectionPortfolio({ data }) {
     <PortfolioSectionStyles>
       <BootsContainer className="wrapper">
         <h2 className="leadTxt title">Wygrane konkursy</h2>
-        <div className="grid">
+        <BootsRow>
           {data.map((item, index) => (
-            <CardGrant
-              key={index}
-              title={item.projekt}
-              company={item.podmiot}
-              grant={item.dotacja}
-            />
+            <BootsColumn md="6" key={index}>
+              <CardGrant
+                title={item.projekt}
+                company={item.podmiot}
+                grant={item.dotacja}
+              />
+            </BootsColumn>
           ))}
-        </div>
+        </BootsRow>
       </BootsContainer>
     </PortfolioSectionStyles>
   );

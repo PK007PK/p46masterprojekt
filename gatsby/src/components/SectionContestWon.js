@@ -44,19 +44,21 @@ export default function SectionContestWon({ data }) {
           strukturalne UE oraz środki krajowe. Do chwili obecnej pozyskaliśmy
           około 482 mln zł dotacji na blisko 180 projektów
         </p>
-        <div className="grid">
-          {data.slice(0, 4).map((item, index) => (
-            <CardGrant
-              key={index}
-              title={item.projekt}
-              company={item.podmiot}
-              grant={item.dotacja}
-            />
-          ))}
-        </div>
         <BootsRow>
-          <BootsColumn md="6" />
-          <BootsColumn md="6">
+          {data.slice(0, 4).map((item, index) => (
+            <BootsColumn md="6">
+              <CardGrant
+                key={index}
+                title={item.projekt}
+                company={item.podmiot}
+                grant={item.dotacja}
+              />
+            </BootsColumn>
+          ))}
+        </BootsRow>
+        <BootsRow>
+          <BootsColumn md="8" />
+          <BootsColumn md="4">
             <Button to="/portfolio">Portfolio</Button>
           </BootsColumn>
         </BootsRow>
