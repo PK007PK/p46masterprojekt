@@ -1,22 +1,19 @@
-import React, { useContext } from 'react';
+import { Link } from 'gatsby';
+import React from 'react';
 import styled from 'styled-components';
-import AppContext from '../AppProvider';
 
-const StyledButton = styled.button`
-  color: var(--red);
-  ${({ theme }) => theme.media.lgAbove} {
-    color: red;
+const StyledButton = styled(Link)`
+  display: block;
+  padding: var(--cardPadding);
+  text-align: center;
+  font-size: 16px;
+  box-shadow: ${({ theme }) => theme.elevation.dp1};
+
+  &:hover {
+    box-shadow: ${({ theme }) => theme.elevation.dp4};
   }
 `;
 
-const Button = () => {
-  const { toogleIsActive, isActive } = useContext(AppContext);
-
-  return (
-    <StyledButton className="zx" onClick={toogleIsActive}>
-      {isActive ? 'Active' : 'Inactive'}
-    </StyledButton>
-  );
-};
+const Button = ({ children }) => <StyledButton>{children}</StyledButton>;
 
 export default Button;

@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
+import Button from './Button';
 import CardSimple2 from './CardSimple2';
 
 const LatestNewsStyles = styled.section`
@@ -13,12 +14,11 @@ const LatestNewsStyles = styled.section`
 
   .readMoreWrapper {
     text-align: right;
-    margin-top: 30px;
 
     a {
       line-height: 1;
-      /* color: var(--activeTxt); */
-      font-size: var(--headingSize);
+      color: var(--darkTxt);
+      /* font-size: var(--headingSize); */
       /* margin-right: var(--cardPadding); */
     }
   }
@@ -44,9 +44,12 @@ export default function LatestNews({ data }) {
             </BootsColumn>
           ))}
         </BootsRow>
-        <div className="readMoreWrapper">
-          <Link to="/blog/1">Zobacz wszystkie wpisy</Link>
-        </div>
+        <BootsRow>
+          <BootsColumn md="8">sss</BootsColumn>
+          <BootsColumn md="4">
+            <Button to="/blog/1">Zobacz wszystkie wpisy</Button>
+          </BootsColumn>
+        </BootsRow>
       </BootsContainer>
     </LatestNewsStyles>
   );

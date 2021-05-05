@@ -1,8 +1,6 @@
 import { Link } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from '../styles/Theme';
 
 const CardSimple2Style = styled(Link)`
   display: block;
