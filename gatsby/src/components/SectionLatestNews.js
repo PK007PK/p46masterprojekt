@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
 import Button from './Button';
-import CardSimple2 from './CardSimple2';
+import CardSimple2 from './CardSimple';
 
 const LatestNewsStyles = styled.section`
   padding: var(--sectionPaddingMob);
@@ -45,7 +45,7 @@ export default function LatestNews({ data }) {
           ))}
         </BootsRow>
         <BootsRow>
-          <BootsColumn md="8">sss</BootsColumn>
+          <BootsColumn md="8" />
           <BootsColumn md="4">
             <Button to="/blog/1">Zobacz wszystkie wpisy</Button>
           </BootsColumn>
