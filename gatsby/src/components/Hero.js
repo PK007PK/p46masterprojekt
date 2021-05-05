@@ -14,7 +14,7 @@ const SectionHeroStyles = styled.div`
   ${({ secondary }) =>
     secondary &&
     css`
-      background-color: var(--red);
+      background-color: var(--redTransp);
     `}
 
   ${({ theme }) => theme.media.smAbove} {

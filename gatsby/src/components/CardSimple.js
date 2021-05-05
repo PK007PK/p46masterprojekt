@@ -20,6 +20,7 @@ const CardSimpleStyle = styled(Link)`
     left: 0;
     right: 0;
     height: 100%;
+    width: 100%;
     transition: var(--basicTransition);
     filter: saturate(30%);
   }

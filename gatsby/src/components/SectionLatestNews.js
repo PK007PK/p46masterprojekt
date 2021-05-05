@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
-import CardSimple from './CardSimple';
+import CardSimple2 from './CardSimple2';
 
 const LatestNewsStyles = styled.section`
   padding: var(--sectionPaddingMob);
@@ -33,7 +33,7 @@ export default function LatestNews({ data }) {
         <BootsRow className="newsWrapper">
           {data.map((item, index) => (
             <BootsColumn md="4" key={index}>
-              <CardSimple
+              <CardSimple2
                 category="Aktualności"
                 title={item.name}
                 subtitle={item.lead}
