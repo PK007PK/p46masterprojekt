@@ -38,7 +38,7 @@ export default function SectionContestWon({ data }) {
       <BootsContainer className="wrapper">
         <h2 className="leadTxt">Wygrane konkursy</h2>
         <p className="infoTxt">
-          Od 2002 roku obsługujemy naszych Klientów w zakresie aplikowania o
+          Od 2004 roku obsługujemy naszych Klientów w zakresie aplikowania o
           dotacje inwestycyjne. Obszarem naszych zainteresowań są fundusze
           strukturalne UE oraz środki krajowe. Do chwili obecnej pozyskaliśmy
           około 482 mln zł dotacji na blisko 180 projektów

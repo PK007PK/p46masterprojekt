@@ -55,10 +55,29 @@ const SectionGridStyles = styled.section`
   }
 `;
 
-const GridTileStyles = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
+const GridTileStyles = styled(Link)`
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &:focus .txtWrapper {
+    background-color: var(--darkTxt);
+  }
+
+  &:focus .titleWrapper {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  &:focus .title {
+    color: var(--activeTxt) !important;
+  }
+
+  &:focus .shortInfo {
+    color: white !important;
+    opacity: 1 !important;
+  }
 
   .background {
     z-index: 1;
@@ -67,14 +86,10 @@ const GridTileStyles = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    /* filter: sepia(80%); */
-    /* filter: grayscale(90%); */
-    /* filter: hue-rotate(90deg); */
-    /* filter: invert(75%); */
     filter: saturate(30%);
   }
 
-  .txt {
+  .txtWrapper {
     z-index: 2;
     position: absolute;
     top: 0;
@@ -139,8 +154,8 @@ const GridTileStyles = styled.div`
 
 function GridTile({ title, link, imgSrc, subtitle }) {
   return (
-    <Link to={link}>
-      <GridTileStyles>
+    <GridTileStyles to={link}>
+      <div className="wrapper">
         <GatsbyImage
           className="background"
           image={imgSrc}
@@ -149,7 +164,7 @@ function GridTile({ title, link, imgSrc, subtitle }) {
           layout="fullWidth"
           formats={['auto', 'webp']}
         />
-        <div className="txt">
+        <div className="txtWrapper">
           <div>
             <div className="titleWrapper">
               <h3 className="title">{title}</h3>
@@ -158,8 +173,8 @@ function GridTile({ title, link, imgSrc, subtitle }) {
           </div>
           <div className="link">></div>
         </div>
-      </GridTileStyles>
-    </Link>
+      </div>
+    </GridTileStyles>
   );
 }
 
@@ -193,7 +208,7 @@ export default function SectionGrid() {
     <SectionGridStyles>
       <BootsContainer>
         <h2 className="leadTxt">
-          Od 2002 roku dla naszych Klientów pozyskaliśmy
+          Od 2004 roku dla naszych Klientów pozyskaliśmy
           <br /> <span className="activeTxt">480 mln zł</span> dotacji na blisko
           <span className="activeTxt"> 180 projektów</span>
         </h2>

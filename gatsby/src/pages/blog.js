@@ -89,6 +89,7 @@ const BlogPage = ({ data, pageContext }) => {
       <Hero
         videoSrcURL={data.cloudinaryMedia.secure_url}
         bottomBar={heroBottomBar}
+        secondary
       />
       <BootsContainer className="sectionPaddings">
         <BootsRow>

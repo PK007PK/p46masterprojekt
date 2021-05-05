@@ -54,7 +54,7 @@ const Typography = createGlobalStyle`
 }
 
 .activeTxt {
-color: var(--activeTxt);
+  color: var(--activeTxt);
 }
 
 .fx-txt-underline {
@@ -71,7 +71,7 @@ color: var(--activeTxt);
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.1s ease-in-out;
-  }
+  }     
 
   &:hover:before {
     visibility: visible;
@@ -87,7 +87,6 @@ color: var(--activeTxt);
     visibility: visible;
     transform: scaleX(1);
   }
-
 }
 
 

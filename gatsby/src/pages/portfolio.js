@@ -34,6 +34,7 @@ const Portfolio = ({ data }) => (
     <Hero
       videoSrcURL={data.cloudinaryMedia.secure_url}
       bottomBar={heroBottomBar}
+      secondary
     />
     <SectionPortfolio data={subsidies} />
     <main />

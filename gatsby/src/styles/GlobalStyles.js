@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-
 /* @font-face {
     font-family: 'roboto';
     src: url('/assets/fonts/Roboto-Medium.woff2')
@@ -17,7 +16,8 @@ html {
 
 /* Variables:  */
     /* Colors */
-    --red: #ff0000;
+    --red: rgba(255, 138, 101, 1);
+    --redTransp: rgba(255, 138, 101, 0.3);
     --black: #393939;
     --grey: #8d99ae;
     --gray: var(--grey);
@@ -56,8 +56,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
     
-
-
 a {
     text-decoration: none;
     color: var(--black);

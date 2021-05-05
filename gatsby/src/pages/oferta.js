@@ -60,18 +60,17 @@ const PageStyling = styled.main`
   .headingPadding {
     padding-top: 50px;
   }
+`;
 
-  .iconWrapper {
-    display: flex;
-    justify-content: center;
-    box-shadow: ${({ theme }) => theme.elevation.dp1};
-    background-color: var(--grey);
-    transition: var(--basicTransition);
+const PDFLinkStyles = styled.div`
+  display: flex;
+  justify-content: center;
+  box-shadow: ${({ theme }) => theme.elevation.dp1};
+  background-color: var(--grey);
+  transition: var(--basicTransition);
 
-    &:hover {
-      box-shadow: ${({ theme }) => theme.elevation.dp4};
-      color: white;
-    }
+  &:hover {
+    box-shadow: ${({ theme }) => theme.elevation.dp4};
   }
 
   .icon {
@@ -81,12 +80,19 @@ const PageStyling = styled.main`
   }
 `;
 
+const PDFLink = () => (
+  <PDFLinkStyles>
+    <VscFilePdf className="icon" />
+  </PDFLinkStyles>
+);
+
 const Offer = ({ data }) => (
   <Layout>
     <SEO title="Oferta" />
     <Hero
       videoSrcURL={data.cloudinaryMedia.secure_url}
       bottomBar={heroBottomBar}
+      secondary
     />
     <PageStyling>
       <BootsContainer>
@@ -120,22 +126,6 @@ const Offer = ({ data }) => (
               <li>
                 Prowadzenie projektu na platformie elektronicznej online
                 (komunikacja, współpraca, repozytorium plików)
-              </li>
-            </ul>
-            <h4>Czas realizacji:</h4>
-            <ul>
-              <li>
-                Zleceniobiorca w terminie 5 dni roboczych od rozpoczęcia
-                realizacji zlecenia określi dane niezbędne do wykonania
-                dokumentacji aplikacyjnej
-              </li>
-              <li>
-                Sporządzenie wersji konsultacyjnej wniosku w terminie 20 dni
-                roboczych od przekazania danych do projektu
-              </li>
-              <li>
-                Wprowadzenie poprawek do wniosku po konsultacjach z Klientem - 5
-                dni od otrzymania uwag
               </li>
             </ul>
             <h4>Sposób realizacji</h4>
@@ -224,9 +214,7 @@ const Offer = ({ data }) => (
             </ul>
           </BootsColumn>
           <BootsColumn md="2" lg="3">
-            <div className="iconWrapper">
-              <VscFilePdf className="icon" />
-            </div>
+            <PDFLink />
           </BootsColumn>
         </BootsRow>
         <BootsRow className="headingPadding">
@@ -310,9 +298,7 @@ const Offer = ({ data }) => (
             </ul>
           </BootsColumn>
           <BootsColumn md="2" lg="3">
-            <div className="iconWrapper">
-              <VscFilePdf className="icon" />
-            </div>
+            <PDFLink />
           </BootsColumn>
         </BootsRow>
         <BootsRow className="headingPadding">
@@ -349,17 +335,6 @@ const Offer = ({ data }) => (
                 konkurs.
               </li>{' '}
             </ul>
-            <h4>Wyłączenia</h4>
-            <ul>
-              <li>
-                Oferta nie obejmuje projektów realizowanych w konsorcjach,
-                projektów kluczowych, projektów o charakterze szkoleniowym.{' '}
-              </li>
-              <li>
-                Oferta nie obejmuje analizy kwalifikowalności kosztów,
-                kwalifikowalności projektu.
-              </li>
-            </ul>
             <h4>Etapy realizacji</h4>
             <ul>
               <li>Podpisanie umowy;</li>
@@ -371,9 +346,7 @@ const Offer = ({ data }) => (
             </ul>
           </BootsColumn>
           <BootsColumn md="2" lg="3">
-            <div className="iconWrapper">
-              <VscFilePdf className="icon" />
-            </div>
+            <PDFLink />
           </BootsColumn>
         </BootsRow>
         <BootsRow className="headingPadding">
@@ -392,18 +365,18 @@ const Offer = ({ data }) => (
               </li>
               <li>
                 przygotowanie dokumentacji konkursowej (tak, zastanawiamy się
-                wspólnie z Klientem czy warto do danego konkursu aplikować, a
+                wspólnie z Klientem czy warto do danego konkursu aplikować, a
                 potem zwyczajnie - bez żadnych formalności - przygotujemy dobrą
-                dokumentację);
+                dokumentację);
               </li>
               <li>
                 rozliczanie projektów (teraz już nie ma problemu co zrobić,
-                kiedy ZOZ wygra konkurs, z automatu zajmiemy się jego
+                kiedy ZOZ wygra konkurs, z automatu zajmiemy się jego
                 rozliczaniem);
               </li>
               <li>
                 dostęp do platformy komunikacyjnej (telefon telefonem, ale nad
-                projektami pracuje się w formie „pisemnej”, dlatego zapraszamy
+                projektami pracuje się w formie „pisemnej”, dlatego zapraszamy
                 naszych klientów do współpracy z nami poprzez wygodną aplikację
                 do zarządzania projektami, która umożliwi budowanie zespołów
                 projektowych współpracujących ze zosbą przez Internet.{' '}
@@ -412,9 +385,7 @@ const Offer = ({ data }) => (
             <p>Zapraszamy do zapoznania się ze szczegółową ofertą.</p>
           </BootsColumn>
           <BootsColumn md="2" lg="3">
-            <div className="iconWrapper">
-              <VscFilePdf className="icon" />
-            </div>
+            <PDFLink />
           </BootsColumn>
         </BootsRow>
       </BootsContainer>

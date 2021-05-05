@@ -7,7 +7,7 @@ import { BootsContainer } from './BootsElements';
 const SectionAddStyles = styled.section`
   position: relative;
   height: 500px;
-
+  margin-top: 100px;
   .background {
     position: absolute;
     width: 100%;

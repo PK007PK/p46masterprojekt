@@ -49,6 +49,7 @@ const BlogPostTemplate = ({ data }) => {
         <Hero
           videoSrcURL={data.cloudinaryMedia.secure_url}
           bottomBar={heroBottomBar}
+          secondary
         />
         <BootsContainer className="sectionPaddings" style={{ padding: '10px' }}>
           <BlockContent

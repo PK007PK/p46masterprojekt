@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { BootsContainer } from './BootsElements';
 
 const SectionHeroStyles = styled.div`
@@ -9,7 +9,13 @@ const SectionHeroStyles = styled.div`
   color: white;
   position: relative;
   margin-top: -101px;
-  background-color: black;
+  background-color: var(--black);
+
+  ${({ secondary }) =>
+    secondary &&
+    css`
+      background-color: var(--red);
+    `}
 
   ${({ theme }) => theme.media.smAbove} {
     margin-top: -128px;
@@ -44,6 +50,12 @@ const SectionHeroStyles = styled.div`
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+
+    ${({ secondary }) =>
+      secondary &&
+      css`
+        display: none;
+      `}
   }
 
   .motto {
@@ -94,6 +106,14 @@ const SectionHeroStyles = styled.div`
 
   .bottomBar {
     margin-bottom: 50px;
+    padding: 40px 0;
+
+    ${({ secondary }) =>
+      secondary &&
+      css`
+        background-color: var(--darkTxt);
+        padding: 40px 40px;
+      `}
   }
 `;
 
@@ -101,6 +121,7 @@ export default function SectionHero({
   videoSrcURL,
   videoTitle,
   bottomBar,
+  secondary,
   ...props
 }) {
   const [isMounted, setIsMounted] = useState(false);
@@ -109,10 +130,8 @@ export default function SectionHero({
   useEffect(() => {
     setTimeout(() => setIsMounted({ isMounted: true }), 150);
   }, []);
-  console.log(videoSrcURL)
-
   return (
-    <SectionHeroStyles>
+    <SectionHeroStyles secondary={secondary}>
       <div className="darkWrapper" />
       {isMounted && (
         <video autoPlay muted loop className="myVideo">

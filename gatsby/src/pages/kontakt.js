@@ -33,6 +33,7 @@ const Kontakt = ({ data }) => (
     <Hero
       videoSrcURL={data.cloudinaryMedia.secure_url}
       bottomBar={heroBottomBar}
+      secondary
     />
     <main>
       <BootsContainer className="sectionPaddings">
