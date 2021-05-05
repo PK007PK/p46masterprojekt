@@ -8,12 +8,15 @@ const StyledButton = styled(Link)`
   text-align: center;
   font-size: 16px;
   box-shadow: ${({ theme }) => theme.elevation.dp1};
+  transition: var(--basicTransition);
 
   &:hover {
     box-shadow: ${({ theme }) => theme.elevation.dp4};
   }
 `;
 
-const Button = ({ children }) => <StyledButton>{children}</StyledButton>;
+const Button = ({ children, to }) => (
+  <StyledButton to={to}>{children}</StyledButton>
+);
 
 export default Button;

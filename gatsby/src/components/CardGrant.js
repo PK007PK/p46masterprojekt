@@ -22,7 +22,7 @@ const CardGrantStyles = styled.div`
     font-weight: bold;
   }
   .grant {
-    color: var(--activeTxt);
+    color: var(--red);
   }
 `;
 

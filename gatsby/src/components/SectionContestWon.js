@@ -3,7 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 import CardGrant from './CardGrant';
 
-import { BootsContainer } from './BootsElements';
+import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
+import Button from './Button';
 
 const GridSectionStyles = styled.section`
   padding: var(--sectionPaddingMob);
@@ -53,9 +54,12 @@ export default function SectionContestWon({ data }) {
             />
           ))}
         </div>
-        <div className="readMoreWrapper">
-          <Link to="/portfolio">Zobacz wszystkie wygrane konkursy</Link>
-        </div>
+        <BootsRow>
+          <BootsColumn md="6" />
+          <BootsColumn md="6">
+            <Button to="/portfolio">Portfolio</Button>
+          </BootsColumn>
+        </BootsRow>
       </BootsContainer>
     </GridSectionStyles>
   );
