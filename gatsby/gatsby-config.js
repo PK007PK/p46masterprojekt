@@ -11,6 +11,7 @@ export default {
   flags: { DEV_SSR: true },
   plugins: [
     'gatsby-plugin-sharp',
+    `gatsby-plugin-transition-link`,
     'gatsby-transformer-sharp',
     `gatsby-plugin-image`,
     'gatsby-plugin-styled-components',

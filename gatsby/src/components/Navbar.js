@@ -3,6 +3,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import { HiOutlineMenu as Burger } from '@react-icons/all-files/hi/HiOutlineMenu';
 import { ImExit as Exit } from '@react-icons/all-files/im/ImExit';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
 import { logoCode } from '../assets/logoCode';
 
@@ -64,7 +65,15 @@ function MobileMenu({ clickBtn }) {
         <ul className="mobileMenuList">
           {menuData.map((item) => (
             <li key={item.id}>
-              <Link to={item.link}>{item.name}</Link>
+              <AniLink
+                className="navbar-brand"
+                cover
+                bg="#1C2331"
+                duration={0.4}
+                to={item.link}
+              >
+                {item.name}
+              </AniLink>
             </li>
           ))}
         </ul>
@@ -149,25 +158,41 @@ export default function Navbar() {
       <BootsContainer>
         <BootsRow style={{ paddingTop: '20px' }}>
           <BootsColumn xxs="4" md="2" className="logoWrapper">
-            <Link to="/">
+            <AniLink
+              className="navbar-brand"
+              cover
+              bg="#1C2331"
+              duration={0.4}
+              to="/"
+            >
               <img
                 style={{ display: 'block', width: '100px' }}
                 alt="Masterprojekt Logo"
                 src={logoCode}
               />
-            </Link>
+            </AniLink>
           </BootsColumn>
           <BootsColumn xxs="8" md="10" className="menuDesktop">
             <ul className="desktopMenuList">
               {menuData.map((item) => (
                 <li key={item.id}>
-                  <Link
+                  <AniLink
+                    activeStyle={{ color: 'rgba(255, 182, 72, 0.8)' }}
+                    className="fx-txt-underline"
+                    cover
+                    bg="#1C2331"
+                    duration={0.4}
+                    to={item.link}
+                  >
+                    {item.name}
+                  </AniLink>
+                  {/* <Link
                     to={item.link}
                     activeStyle={{ color: 'rgba(255, 182, 72, 0.8)' }}
                     className="fx-txt-underline"
                   >
                     {item.name}
-                  </Link>
+                  </Link> */}
                 </li>
               ))}
             </ul>
