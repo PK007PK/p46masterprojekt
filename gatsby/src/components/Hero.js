@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { BootsContainer } from './BootsElements';
 
 const SectionHeroStyles = styled.div`
@@ -56,6 +57,15 @@ const SectionHeroStyles = styled.div`
       css`
         display: none;
       `}
+  }
+
+  .backgroundImg {
+    position: absolute;
+    z-index: -2;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .motto {
@@ -119,6 +129,7 @@ const SectionHeroStyles = styled.div`
 
 export default function SectionHero({
   videoSrcURL,
+  imgSrc,
   videoTitle,
   bottomBar,
   secondary,
@@ -133,10 +144,21 @@ export default function SectionHero({
   return (
     <SectionHeroStyles secondary={secondary}>
       <div className="darkWrapper" />
-      {isMounted && (
-        <video autoPlay muted loop className="myVideo">
+      {isMounted && videoSrcURL && (
+        <video autoPlay muted loop className="myVideo" aria-hidden="true">
           <source src={videoSrcURL} type="video/mp4" />
         </video>
+      )}
+      {imgSrc && (
+        <GatsbyImage
+          className="backgroundImg"
+          image={imgSrc}
+          placeholder="blurred"
+          alt="background image"
+          aria-hidden="true"
+          formats={['auto', 'webp']}
+          quality={50}
+        />
       )}
       <BootsContainer className="txtWrapper">
         <div />

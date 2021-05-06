@@ -14,7 +14,8 @@ const CardSimple2Style = styled(Link)`
   transition: var(--basicTransition);
   background-color: var(--darkOrange);
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: ${({ theme }) => theme.elevation.dp4};
   }
 

@@ -25,7 +25,8 @@ const CardSimpleStyle = styled(Link)`
     filter: saturate(30%);
   }
 
-  &:hover .background {
+  &:hover .background,
+  &:focus .background {
     transform: scale(1.1) rotate(1deg);
   }
 
@@ -40,7 +41,8 @@ const CardSimpleStyle = styled(Link)`
     transition: var(--basicTransition);
   }
 
-  &:hover .darkBack {
+  &:hover .darkBack,
+  &:focus .darkBack {
     background-color: var(--darkTxt);
   }
 

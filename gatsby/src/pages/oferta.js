@@ -27,7 +27,7 @@ const HeroBottomBarStyles = styled.div`
 
 const heroBottomBar = () => (
   <HeroBottomBarStyles>
-    <div className="subtitle"># Oferta</div>
+    <h2 className="subtitle"># Oferta</h2>
   </HeroBottomBarStyles>
 );
 
@@ -90,7 +90,7 @@ const Offer = ({ data }) => (
   <Layout>
     <SEO title="Oferta" />
     <Hero
-      videoSrcURL={data.cloudinaryMedia.secure_url}
+      imgSrc={data.image.childImageSharp.gatsbyImageData}
       bottomBar={heroBottomBar}
       secondary
     />
@@ -395,8 +395,10 @@ const Offer = ({ data }) => (
 
 export const pageQuery = graphql`
   {
-    cloudinaryMedia(public_id: { eq: "Back3" }) {
-      secure_url
+    image: file(name: { eq: "portfolio" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP])
+      }
     }
   }
 `;

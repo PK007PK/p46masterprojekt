@@ -13,7 +13,8 @@ const CardGrantStyles = styled.div`
   justify-content: center;
   overflow: hidden;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: ${({ theme }) => theme.elevation.dp4};
   }
   .company,

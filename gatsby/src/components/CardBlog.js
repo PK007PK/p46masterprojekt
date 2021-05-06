@@ -12,7 +12,8 @@ const CardBlogStyles = styled(Link)`
   transition: var(--basicTransition);
   box-shadow: ${({ theme }) => theme.elevation.dp1};
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--grey2);
     box-shadow: ${({ theme }) => theme.elevation.dp4};
   }

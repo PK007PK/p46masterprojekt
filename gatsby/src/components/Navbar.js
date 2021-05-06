@@ -42,11 +42,14 @@ function MobileMenu({ clickBtn }) {
   return (
     <MobileMenuStyle>
       <BootsContainer>
-        <BootsRow>
+        <BootsRow style={{ paddingTop: '20px' }}>
           <BootsColumn xxs="4" md="2" className="logoWrapper">
             <Link to="/">
               <img
-                style={{ display: 'block', width: '100px' }}
+                style={{
+                  display: 'block',
+                  width: '100px',
+                }}
                 alt="Masterprojekt Logo"
                 src={logoCode}
               />
@@ -144,7 +147,7 @@ export default function Navbar() {
   return (
     <NavStyle>
       <BootsContainer>
-        <BootsRow>
+        <BootsRow style={{ paddingTop: '20px' }}>
           <BootsColumn xxs="4" md="2" className="logoWrapper">
             <Link to="/">
               <img

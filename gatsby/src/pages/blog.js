@@ -32,7 +32,7 @@ const HeroBottomBarStyles = styled.div`
 
 const heroBottomBar = () => (
   <HeroBottomBarStyles>
-    <div className="subtitle"># Blog</div>
+    <h2 className="subtitle"># Blog</h2>
   </HeroBottomBarStyles>
 );
 
@@ -92,8 +92,8 @@ const BlogPage = ({ data, pageContext }) => {
         } ${pageContext.currentPage ? `| ${pageContext.currentPage}` : ''}`}
       />
       <Hero
-        videoSrcURL={data.cloudinaryMedia.secure_url}
         bottomBar={heroBottomBar}
+        imgSrc={data.image.childImageSharp.gatsbyImageData}
         secondary
       />
       <BootsContainer style={{ marginTop: '60px' }}>
@@ -127,8 +127,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    cloudinaryMedia(public_id: { eq: "Back3" }) {
-      secure_url
+    image: file(name: { eq: "blog" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP])
+      }
     }
     category: allSanityBlogPosts(
       limit: $pageSize

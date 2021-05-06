@@ -40,7 +40,6 @@ export default function SectionPortfolio({ data }) {
   return (
     <PortfolioSectionStyles>
       <BootsContainer className="wrapper">
-        <h2 className="leadTxt title">Wygrane konkursy</h2>
         <BootsRow>
           {data.map((item, index) => (
             <BootsColumn md="6" key={index}>

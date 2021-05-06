@@ -63,11 +63,11 @@ const GridTileStyles = styled(Link)`
   }
 
   &:focus .txtWrapper {
-    background-color: var(--darkTxt);
+    background-color: var(--darkTxt) !important;
   }
 
   &:focus .titleWrapper {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0) !important;
   }
 
   &:focus .title {

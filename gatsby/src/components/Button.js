@@ -10,7 +10,8 @@ const StyledButton = styled(Link)`
   box-shadow: ${({ theme }) => theme.elevation.dp1};
   transition: var(--basicTransition);
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: ${({ theme }) => theme.elevation.dp4};
   }
 `;

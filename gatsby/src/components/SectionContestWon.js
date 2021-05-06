@@ -46,7 +46,7 @@ export default function SectionContestWon({ data }) {
         </p>
         <BootsRow>
           {data.slice(0, 4).map((item, index) => (
-            <BootsColumn md="6">
+            <BootsColumn md="6" key={index}>
               <CardGrant
                 key={index}
                 title={item.projekt}

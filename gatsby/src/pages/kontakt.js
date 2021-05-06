@@ -23,7 +23,7 @@ const HeroBottomBarStyles = styled.div`
 
 const heroBottomBar = () => (
   <HeroBottomBarStyles>
-    <div className="subtitle"># Kontakt</div>
+    <h2 className="subtitle"># Kontakt</h2>
   </HeroBottomBarStyles>
 );
 
@@ -31,12 +31,12 @@ const Kontakt = ({ data }) => (
   <Layout>
     <SEO title="Kontakt" />
     <Hero
-      videoSrcURL={data.cloudinaryMedia.secure_url}
+      imgSrc={data.image.childImageSharp.gatsbyImageData}
       bottomBar={heroBottomBar}
       secondary
     />
     <main>
-      <BootsContainer className="sectionPaddings">
+      <BootsContainer style={{ marginTop: '60px' }}>
         <h2 id="blog" className="leadTxt">
           Komunikat
         </h2>
@@ -56,8 +56,10 @@ const Kontakt = ({ data }) => (
 
 export const pageQuery = graphql`
   {
-    cloudinaryMedia(public_id: { eq: "Back3" }) {
-      secure_url
+    image: file(name: { eq: "contact" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP])
+      }
     }
   }
 `;
