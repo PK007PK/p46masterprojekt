@@ -10,11 +10,18 @@ export default {
 
   flags: { DEV_SSR: true },
   plugins: [
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'portal',
+        id: 'portal',
+      },
+    },
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
-    'gatsby-transformer-sharp',
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
-    'gatsby-plugin-styled-components',
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-cloudinary`,
       options: {
@@ -50,7 +57,7 @@ export default {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
           include: /assets/,
@@ -86,7 +93,7 @@ export default {
       },
     },
     `gatsby-remark-copy-linked-files`,
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-helmet`,
     // {
     //   resolve: "gatsby-plugin-manifest",
     //   options: {

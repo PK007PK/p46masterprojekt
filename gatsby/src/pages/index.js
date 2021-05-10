@@ -10,6 +10,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import SectionAdd from '../components/SectionAdd';
 import subsidies from '../assets/data/allConsultingProjects';
+import SectionNewsletter from '../components/SectionNewsletter/SectionNewsletter';
 
 const HeroBottomBarStyles = styled.div`
   ${({ theme }) => theme.media.mdAbove} {
@@ -42,6 +43,7 @@ const IndexPage = ({ data }) => (
         bottomBar={heroBottomBar}
       />
       <SectionGrid />
+      <SectionNewsletter />
       <SectionLatestNews data={data.allSanityBlogPosts.nodes} />
       <SectionContestWon data={subsidies} />
       <SectionAdd />

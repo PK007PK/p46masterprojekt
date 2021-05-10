@@ -29,8 +29,12 @@ html {
     --offWhite: #ededed;
     --maxWidth: #1000px;
     --darkTxt: #252525;
-    /* --activeTxt: #f26522; */
-    --activeTxt: var(--darkOrange);
+    --pink: rgb(236, 64, 122);
+    --activeTxt: var(--red);
+    --active: var(--offWhite);
+    --activeTxt: var(--red);
+    
+
 
     /* Spacings */
     --sectionPaddingMob: 75px 0px 0px 0px;
