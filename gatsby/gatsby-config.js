@@ -10,7 +10,13 @@ export default {
 
   flags: { DEV_SSR: true },
   plugins: [
-    `gatsby-plugin-portal`,
+    {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'portal',
+        id: 'portal',
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
     `gatsby-transformer-sharp`,
