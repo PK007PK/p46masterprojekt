@@ -10,7 +10,7 @@ export function FormMailchimp() {
         aplikowania o środki
       </h3>
       <Mailchimp
-        action="https://masterprojekt.us16.list-manage.com/subscribe/post?u=782afe1fa00f8b7841829b048&amp;id=3da9210cca"
+        action="https://masterprojekt.us1.list-manage.com/subscribe/post?u=782afe1fa00f8b7841829b048&amp;id=3da9210cca"
         fields={[
           {
             name: 'EMAIL',

@@ -33,6 +33,7 @@ html {
     --activeTxt: var(--red);
     --active: var(--offWhite);
     --activeTxt: var(--red);
+    --deepBlue: #535353;
     
 
 
