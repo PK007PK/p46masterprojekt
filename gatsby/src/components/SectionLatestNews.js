@@ -18,13 +18,12 @@ const LatestNewsStyles = styled.section`
     a {
       line-height: 1;
       color: var(--darkTxt);
-      /* font-size: var(--headingSize); */
-      /* margin-right: var(--cardPadding); */
     }
   }
 `;
 
 export default function LatestNews({ data }) {
+  console.log(data);
   return (
     <LatestNewsStyles>
       <BootsContainer>
@@ -34,7 +33,9 @@ export default function LatestNews({ data }) {
           {data.map((item, index) => (
             <BootsColumn md="4" key={index}>
               <CardSimple2
-                category="Aktualności"
+                category={`${item.categories[0]?.name} ${
+                  item.categories[1]?.name ? item.categories[1]?.name : ''
+                }`}
                 title={item.name}
                 subtitle={item.lead}
                 link={`/${item.slug.current}`}

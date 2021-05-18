@@ -7,7 +7,7 @@ const CardGrantStyles = styled.div`
   padding: var(--cardPadding);
   box-shadow: ${({ theme }) => theme.elevation.dp1};
   transition: var(--basicTransition);
-  height: 250px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;

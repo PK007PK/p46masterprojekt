@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const CardSimple2Style = styled(Link)`
   display: block;
-  height: 330px;
+  min-height: 360px;
   overflow: hidden;
   position: relative;
   margin-bottom: var(--cardPadding);

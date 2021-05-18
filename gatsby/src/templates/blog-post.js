@@ -38,6 +38,11 @@ const BlogPostTemplate = ({ data }) => {
     </HeroBottomBarStyles>
   );
 
+  const StyledBlockContent = styled(BlockContent)`
+    margin-top: 20px;
+    min-height: 33vh;
+  `;
+
   return (
     <Layout>
       <SEO title={post.name} description={post.lead} />
@@ -52,7 +57,7 @@ const BlogPostTemplate = ({ data }) => {
           secondary
         />
         <BootsContainer className="sectionPaddings" style={{ padding: '10px' }}>
-          <BlockContent
+          <StyledBlockContent
             blocks={post._rawRichText}
             dataset="production"
             url=""

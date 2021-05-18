@@ -64,6 +64,9 @@ export const pageQuery = graphql`
         slug {
           current
         }
+        categories {
+          name
+        }
         image {
           asset {
             gatsbyImageData(width: 350)
