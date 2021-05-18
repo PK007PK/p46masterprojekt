@@ -17,6 +17,7 @@ const BlogPostTemplate = ({ data }) => {
     ${({ theme }) => theme.media.mdAbove} {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     .subtitle {
       ${({ theme }) => theme.media.mdAbove} {
@@ -40,7 +41,11 @@ const BlogPostTemplate = ({ data }) => {
 
   const StyledBlockContent = styled(BlockContent)`
     margin-top: 20px;
+
     min-height: 33vh;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
   `;
 
   return (

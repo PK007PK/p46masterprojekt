@@ -395,7 +395,7 @@ const Offer = ({ data }) => (
 
 export const pageQuery = graphql`
   {
-    image: file(name: { eq: "portfolio" }) {
+    image: file(name: { eq: "offer" }) {
       childImageSharp {
         gatsbyImageData(placeholder: TRACED_SVG, formats: [AUTO, WEBP])
       }

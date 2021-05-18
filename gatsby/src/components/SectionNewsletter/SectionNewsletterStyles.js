@@ -7,9 +7,13 @@ export const SectionNewsletterStyles = styled.section`
 
   .grid-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px;
+    grid-template-columns: 1fr;
     grid-gap: 33px;
+
+    ${({ theme }) => theme.media.smAbove} {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px;
+    }
   }
 
   .tile {

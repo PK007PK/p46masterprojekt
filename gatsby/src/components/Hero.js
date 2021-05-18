@@ -33,7 +33,7 @@ const SectionHeroStyles = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .txtWrapper {
@@ -45,17 +45,26 @@ const SectionHeroStyles = styled.div`
   }
 
   .myVideo {
-    position: absolute;
-    z-index: -2;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    display: none;
+
+    ${({ theme }) => theme.media.mdAbove} {
+      display: block;
+      position: absolute;
+      z-index: -2;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
 
     ${({ secondary }) =>
       secondary &&
       css`
         display: none;
+
+        ${({ theme }) => theme.media.mdAbove} {
+          display: none;
+        }
       `}
   }
 
