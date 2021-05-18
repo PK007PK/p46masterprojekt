@@ -2,7 +2,7 @@ import Mailchimp from 'react-mailchimp-form';
 import React from 'react';
 import { FormMailchimpStyles } from './FormMailchimpStyles';
 
-export function FormMailchimp() {
+export default function FormMailchimp() {
   return (
     <FormMailchimpStyles>
       <h3 className="info">

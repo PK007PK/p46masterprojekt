@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => (
         bottomBar={heroBottomBar}
       />
       <SectionGrid />
-      {/* <SectionNewsletter /> */}
+      <SectionNewsletter />
       <SectionLatestNews data={data.allSanityBlogPosts.nodes} />
       <SectionContestWon data={subsidies} />
       <SectionAdd />
