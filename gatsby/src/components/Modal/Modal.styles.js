@@ -22,7 +22,7 @@ export const ModalStyles = styled.div`
 
   .modal {
     border-radius: var(--borderRadiusBasic);
-    animation: var(--animationBasic);
+    animation: intro 0.4s ease;
     padding: var(--spacingMedium);
     position: absolute;
     top: 50%;

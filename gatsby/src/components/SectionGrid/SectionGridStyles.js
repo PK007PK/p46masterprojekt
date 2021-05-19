@@ -11,7 +11,7 @@ export const SectionGridStyles = styled.section`
       'obt'
       'fin'
       'serv';
-    grid-gap: 20px;
+    grid-gap: 25px;
 
     ${({ theme }) => theme.media.mdAbove} {
       grid-template-columns: 1fr 1fr 1fr;

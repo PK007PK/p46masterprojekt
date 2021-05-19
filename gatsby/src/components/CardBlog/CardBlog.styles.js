@@ -8,7 +8,12 @@ export const CardBlogStyles = styled(Link)`
   box-shadow: ${({ theme }) => theme.elevation.dp1};
   display: grid;
   grid-template-rows: 210px;
-  grid-template-columns: 310px 1fr;
+  grid-template-columns: 1fr;
+
+  ${({ theme }) => theme.media.smAbove} {
+    grid-template-rows: 210px;
+    grid-template-columns: 310px 1fr;
+  }
 
   &:hover,
   &:focus {

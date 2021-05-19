@@ -32,7 +32,9 @@ const HeroBottomBarStyles = styled.div`
 
 const heroBottomBar = () => (
   <HeroBottomBarStyles>
-    <h2 className="subtitle"># Blog</h2>
+    <h2 className="subtitle" style={{ marginTop: '0' }}>
+      # Blog
+    </h2>
   </HeroBottomBarStyles>
 );
 

@@ -24,7 +24,9 @@ const HeroBottomBarStyles = styled.div`
 
 const heroBottomBar = () => (
   <HeroBottomBarStyles>
-    <h2 className="subtitle"># Portfolio / Wygrane konkursy</h2>
+    <h2 className="subtitle" style={{ marginTop: '0' }}>
+      # Portfolio / Wygrane konkursy
+    </h2>
   </HeroBottomBarStyles>
 );
 

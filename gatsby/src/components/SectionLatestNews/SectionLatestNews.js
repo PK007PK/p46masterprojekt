@@ -24,11 +24,12 @@ export default function LatestNews({ data }) {
                 link={`/${item.slug.current}`}
                 date={item.date}
                 imgSrc={item.image?.asset?.gatsbyImageData}
+                style={{ marginBottom: '25px' }}
               />
             </BootsColumn>
           ))}
         </BootsRow>
-        <BootsRow style={{ marginTop: '25px' }}>
+        <BootsRow>
           <BootsColumn md="8" />
           <BootsColumn md="4">
             <Button to="/blog/1">Zobacz wszystkie wpisy</Button>
