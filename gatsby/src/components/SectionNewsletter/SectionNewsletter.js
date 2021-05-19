@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import { FaMailchimp } from '@react-icons/all-files/fa/FaMailchimp';
 import { ImBasecamp } from '@react-icons/all-files/im/ImBasecamp';
 
-import { BootsColumn, BootsContainer, BootsRow } from '../BootsElements';
-import Button from '../Button';
+import { BootsContainer } from '../BootsElements';
+
 import FormMailchimp from '../FormMailchimp/FormMailchimp';
 import FormLogin from '../FormLogin/FormLogin';
 import Modal from '../Modal/Modal';

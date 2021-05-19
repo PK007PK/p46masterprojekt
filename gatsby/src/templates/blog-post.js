@@ -2,8 +2,8 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import BlockContent from '@sanity/block-content-to-react';
 import styled from 'styled-components';
-import Hero from '../components/Hero';
-import Layout from '../components/Layout';
+import SectionHero from '../components/SectionHero/SectionHero';
+import Layout from '../components/Layout/Layout';
 
 import SEO from '../components/SEO';
 import { BootsContainer } from '../components/BootsElements';
@@ -56,7 +56,7 @@ const BlogPostTemplate = ({ data }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <Hero
+        <SectionHero
           videoSrcURL={data.cloudinaryMedia.secure_url}
           bottomBar={heroBottomBar}
           secondary

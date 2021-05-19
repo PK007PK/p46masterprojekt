@@ -7,8 +7,8 @@ import {
   BootsContainer,
   BootsRow,
 } from '../components/BootsElements';
-import Hero from '../components/Hero';
-import Layout from '../components/Layout';
+import SectionHero from '../components/SectionHero/SectionHero';
+import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO';
 
 const HeroBottomBarStyles = styled.div`
@@ -89,7 +89,7 @@ const PDFLink = () => (
 const Offer = ({ data }) => (
   <Layout>
     <SEO title="Oferta" />
-    <Hero
+    <SectionHero
       imgSrc={data.image.childImageSharp.gatsbyImageData}
       bottomBar={heroBottomBar}
       secondary

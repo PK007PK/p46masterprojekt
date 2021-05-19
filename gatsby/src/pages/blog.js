@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 
 import styled from 'styled-components';
-import Hero from '../components/Hero';
-import Layout from '../components/Layout';
+import SectionHero from '../components/SectionHero/SectionHero';
+import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO';
 import CategoryFilter from '../components/CategoryFilter';
 import TagsFilter from '../components/TagsFilter';
@@ -14,7 +14,7 @@ import {
   BootsRow,
 } from '../components/BootsElements';
 import projectConfig from '../projectConfig';
-import CardBlog from '../components/CardBlog';
+import CardBlog from '../components/CardBlog/CardBlog';
 
 const HeroBottomBarStyles = styled.div`
   ${({ theme }) => theme.media.mdAbove} {
@@ -91,7 +91,7 @@ const BlogPage = ({ data, pageContext }) => {
           pageContext.sellectionName ? `| ${pageContext.sellectionName}` : ''
         } ${pageContext.currentPage ? `| ${pageContext.currentPage}` : ''}`}
       />
-      <Hero
+      <SectionHero
         bottomBar={heroBottomBar}
         imgSrc={data.image.childImageSharp.gatsbyImageData}
         secondary

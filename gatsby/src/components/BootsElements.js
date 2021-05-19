@@ -37,35 +37,13 @@ export const BootsRow = styled.div`
   flex-wrap: wrap;
   margin: 0px -15px;
   position: relative;
-  ${({ margin }) => margin && `margin: ${margin};`}
-  ${({ marginColumnBelow = 'mdBelow', marginValue }) =>
-    marginColumnBelow && theme.media[marginColumnBelow]} {
-    & > * {
-      margin-bottom: ${({ marginValue = '24px;' }) => marginValue};
-    }
-    & > *:last-child {
-      margin-bottom: 0px;
-    }
-  }
 `;
 
 export const BootsColumn = styled.div`
   width: 100%;
   padding: 0 15px;
   position: relative;
-  ${({ yPadding }) =>
-    yPadding && `padding-top: ${yPadding}; padding-bottom: ${yPadding};`}
-  ${({ center }) =>
-    center &&
-    `
-      {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    `}
-    ${({ xxs }) =>
+  ${({ xxs }) =>
     xxs &&
     `
       {
@@ -73,7 +51,7 @@ export const BootsColumn = styled.div`
         flex: 0 0 ${(xxs / 12) * 100}%;
       }
     `}
-  
+
   ${({ theme }) => theme.media.xsAbove} {
     ${({ xs }) =>
       xs &&

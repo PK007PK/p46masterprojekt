@@ -1,11 +1,11 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import Hero from '../components/Hero';
-import SectionPortfolio from '../components/SectionPortfolio';
+import SectionHero from '../components/SectionHero/SectionHero';
+import SectionPortfolio from '../components/SectionPortfolio/SectionPortfolio';
 import subsidies from '../assets/data/allConsultingProjects';
 
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO';
 
 const HeroBottomBarStyles = styled.div`
@@ -31,7 +31,7 @@ const heroBottomBar = () => (
 const Portfolio = ({ data }) => (
   <Layout>
     <SEO title="Portfolio" />
-    <Hero
+    <SectionHero
       imgSrc={data.image.childImageSharp.gatsbyImageData}
       bottomBar={heroBottomBar}
       secondary

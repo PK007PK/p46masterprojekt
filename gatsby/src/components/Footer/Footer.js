@@ -1,30 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 import { FaCheckDouble } from '@react-icons/all-files/fa/FaCheckDouble';
-import { BootsContainer } from './BootsElements';
+import { BootsContainer } from '../BootsElements';
+import { FooterStyles } from './Footer.styles';
 
-const FooterStyles = styled.footer`
-  background-color: var(--darkTxt);
-  color: white;
-  padding: 30px 0;
-
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  a {
-    color: white;
-  }
-
-  p {
-    margin: 0;
-  }
-`;
-
-export default function Footer() {
+export default function Footer(props) {
   return (
-    <FooterStyles>
+    <FooterStyles {...props}>
       <BootsContainer className="wrapper">
         <p className="copyryght">
           &copy; Masterprojekt S.C.

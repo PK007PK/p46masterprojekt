@@ -1,10 +1,10 @@
 import React from 'react';
 import { FormLoginStyles } from './FormLoginStyles';
 
-export default function FormMailchimp() {
+export default function FormMailchimp(props) {
   return (
-    <FormLoginStyles>
-      <h3 className="info">Logowanie</h3>
+    <FormLoginStyles {...props}>
+      <p className="info">Zaloguj się do systemu obsługi zleceń</p>
       <form action="action_page.php" method="post">
         <div className="">
           <label htmlFor="uname">Username</label>

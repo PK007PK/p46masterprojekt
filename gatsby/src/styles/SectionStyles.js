@@ -3,10 +3,10 @@ import { createGlobalStyle } from 'styled-components';
 const SectionStyles = createGlobalStyle`
 
     .sectionPaddings {
-        padding: var(--sectionPaddingMob);
+        padding: var(--spacingMedium) 0;
 
         ${({ theme }) => theme.media.mdAbove} {
-            padding: var(--sectionPadding);
+            padding: var(--spacingLarge) 0;
         }
     }
 

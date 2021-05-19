@@ -29,11 +29,11 @@ const Typography = createGlobalStyle`
   line-height: 1.35;
 
   ${({ theme }) => theme.media.smAbove} {
-    font-size: var(--leadSizeMob);
+    font-size: var(--fontSizeBigX1);
   }
 
   ${({ theme }) => theme.media.mdAbove} {
-    font-size: var(--leadSize);
+    font-size: var(--fontSizeBigX2);
   }
 
 }
@@ -45,11 +45,11 @@ const Typography = createGlobalStyle`
   margin: 25px 0 50px;
   
   ${({ theme }) => theme.media.smAbove} {
-    font-size: 16px;  
+    font-size: var(--fontSizeRegular);
   }
 
   ${({ theme }) => theme.media.mdAbove} {
-    font-size: 20px;  
+    font-size: var(--fontSizeBigX1);
   }
 }
 

@@ -35,21 +35,35 @@ html {
     --activeTxt: var(--red);
     --deepBlue: #535353;
     
-
-
     /* Spacings */
-    --sectionPaddingMob: 75px 0px 0px 0px;
-    --sectionPadding: 150px 0px 0px 0px;
-    --cardPadding: 25px;
+    --spacingSmall: 12px;
+    --spacingRegular: 25px;
+    --spacingMedium: 40px;
+    --spacingLarge: 75px;
+    --spacingXXL: 150px;
+
+    --paddingSectionMob: 75px 0px 0px 0px;
+    --paddingSection: 150px 0px 0px 0px;
+    --paddingInput: 12px 25px;
+    --paddingButton: 12px 25px;
+    --paddingCard: var(--spacingRegular);
+
 
     /* Font sizes */
-    --smallSize: 14px;
-    --headingSize: 25px;
-    --leadSizeMob: 30px;
-    --leadSize: 40px;
+    --fontSizeXSmall: 12px;
+    --fontSizeSmall: 14px;
+    --fontSizeRegular: 17px;
+    --fontSizeBigX1: 25px;
+    --fontSizeBigX2: 40px;
+    --fontSizeBigX3: 80px;
 
     /* FX */
-    --basicTransition: 0.4s;
+    --transitionFast: 0.3s;
+    --transitionBasic: 0.4s;
+    --transitionSlow: 0.5s;
+
+    --animationBasic: 0.4s;
+    --borderRadiusBasic: 5px;
 }
 
 *, *:before, *:after {

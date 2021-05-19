@@ -1,10 +1,10 @@
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import CardGrant from './CardGrant';
+import CardGrant from '../CardGrant/CardGrant';
 
-import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
-import Button from './Button';
+import { BootsColumn, BootsContainer, BootsRow } from '../BootsElements';
+import Button from '../Button/Button';
 
 const GridSectionStyles = styled.section`
   padding: var(--sectionPaddingMob);
@@ -19,23 +19,11 @@ const GridSectionStyles = styled.section`
       grid-template-columns: 1fr 1fr;
     }
   }
-
-  .readMoreWrapper {
-    text-align: right;
-    margin-bottom: 50px;
-
-    a {
-      line-height: 1;
-      color: var(--activeTxt);
-      font-size: var(--headingSize);
-      margin-right: var(--cardPadding);
-    }
-  }
 `;
 
 export default function SectionContestWon({ data }) {
   return (
-    <GridSectionStyles>
+    <GridSectionStyles className="sectionPaddings">
       <BootsContainer className="wrapper">
         <h2 className="leadTxt">Wygrane konkursy</h2>
         <p className="infoTxt">

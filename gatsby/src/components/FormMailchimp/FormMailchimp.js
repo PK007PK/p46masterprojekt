@@ -2,13 +2,13 @@ import Mailchimp from 'react-mailchimp-form';
 import React from 'react';
 import { FormMailchimpStyles } from './FormMailchimpStyles';
 
-export default function FormMailchimp() {
+export default function FormMailchimp(props) {
   return (
-    <FormMailchimpStyles>
-      <h3 className="info">
+    <FormMailchimpStyles {...props}>
+      <p className="info">
         Bądź na bieżąco z informacjami o naszej ofercie i możliwościach
         aplikowania o środki
-      </h3>
+      </p>
       <Mailchimp
         action="https://masterprojekt.us1.list-manage.com/subscribe/post?u=782afe1fa00f8b7841829b048&amp;id=3da9210cca"
         fields={[

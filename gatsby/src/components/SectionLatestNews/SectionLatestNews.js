@@ -1,38 +1,21 @@
-import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import { BootsColumn, BootsContainer, BootsRow } from './BootsElements';
-import Button from './Button';
-import CardSimple2 from './CardSimple';
+import { BootsColumn, BootsContainer, BootsRow } from '../BootsElements';
+import Button from '../Button/Button';
+import CardSimple from '../CardSimple/CardSimple';
 
-const LatestNewsStyles = styled.section`
-  padding: var(--sectionPaddingMob);
-
-  ${({ theme }) => theme.media.mdAbove} {
-    padding: var(--sectionPadding);
-  }
-
-  .readMoreWrapper {
-    text-align: right;
-
-    a {
-      line-height: 1;
-      color: var(--darkTxt);
-    }
-  }
-`;
+const LatestNewsStyles = styled.section``;
 
 export default function LatestNews({ data }) {
-  console.log(data);
   return (
-    <LatestNewsStyles>
+    <LatestNewsStyles className="sectionPaddings">
       <BootsContainer>
         <h2 className="leadTxt">Najnowsze informacje</h2>
         <p className="infoTxt">Aktualności, wydarzenia, konkursy</p>
         <BootsRow className="newsWrapper">
           {data.map((item, index) => (
             <BootsColumn md="4" key={index}>
-              <CardSimple2
+              <CardSimple
                 category={`${item.categories[0]?.name} ${
                   item.categories[1]?.name ? item.categories[1]?.name : ''
                 }`}

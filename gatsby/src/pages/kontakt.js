@@ -2,9 +2,9 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { BootsContainer } from '../components/BootsElements';
-import Hero from '../components/Hero';
+import SectionHero from '../components/SectionHero/SectionHero';
 
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO';
 
 const HeroBottomBarStyles = styled.div`
@@ -30,7 +30,7 @@ const heroBottomBar = () => (
 const Kontakt = ({ data }) => (
   <Layout>
     <SEO title="Kontakt" />
-    <Hero
+    <SectionHero
       imgSrc={data.image.childImageSharp.gatsbyImageData}
       bottomBar={heroBottomBar}
       secondary

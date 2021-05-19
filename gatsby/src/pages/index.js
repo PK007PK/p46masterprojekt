@@ -1,14 +1,14 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import SectionContestWon from '../components/SectionContestWon';
-import SectionGrid from '../components/SectionGrid';
-import Hero from '../components/Hero';
-import SectionLatestNews from '../components/SectionLatestNews';
+import SectionContestWon from '../components/SectionContestWon/SectionContestWon';
+import SectionGrid from '../components/SectionGrid/SectionGrid';
+import SectionHero from '../components/SectionHero/SectionHero';
+import SectionLatestNews from '../components/SectionLatestNews/SectionLatestNews';
 
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO';
-import SectionAdd from '../components/SectionAdd';
+import SectionAdd from '../components/SectionAdd/SectionAdd';
 import subsidies from '../assets/data/allConsultingProjects';
 import SectionNewsletter from '../components/SectionNewsletter/SectionNewsletter';
 
@@ -38,7 +38,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Strona główna" />
     <main>
-      <Hero
+      <SectionHero
         videoSrcURL={data.cloudinaryMedia.secure_url}
         bottomBar={heroBottomBar}
       />

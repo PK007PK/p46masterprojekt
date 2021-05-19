@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { BootsContainer } from './BootsElements';
+import { BootsContainer } from '../BootsElements';
 
 const SectionHeroStyles = styled.div`
+  background-color: var(--black);
   z-index: -3;
   height: 105vh;
-  max-height: 1100px;
   color: white;
   position: relative;
   margin-top: -101px;
-  background-color: var(--black);
 
   ${({ secondary }) =>
     secondary &&
@@ -24,6 +23,10 @@ const SectionHeroStyles = styled.div`
 
   ${({ theme }) => theme.media.lgAbove} {
     margin-top: -95px;
+  }
+
+  ${({ theme }) => theme.media.xlAbove} {
+    max-height: 900px;
   }
 
   .darkWrapper {
@@ -139,10 +142,8 @@ const SectionHeroStyles = styled.div`
 export default function SectionHero({
   videoSrcURL,
   imgSrc,
-  videoTitle,
   bottomBar,
   secondary,
-  ...props
 }) {
   const [isMounted, setIsMounted] = useState(false);
   const BottomBar = bottomBar;

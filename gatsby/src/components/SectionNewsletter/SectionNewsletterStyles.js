@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 export const SectionNewsletterStyles = styled.section`
-  margin: 100px 0 0;
   background-color: var(--darkOrange);
-  padding: 100px 0;
+  padding: 80px 0;
 
   .grid-wrapper {
+    grid-gap: var(--spacingMedium);
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 33px;
 
     ${({ theme }) => theme.media.smAbove} {
       grid-template-columns: 1fr 1fr;
@@ -17,16 +16,15 @@ export const SectionNewsletterStyles = styled.section`
   }
 
   .tile {
+    padding: var(--spacingRegular);
+    box-shadow: ${({ theme }) => theme.elevation.dp1};
+    font-size: var(--fontSizeBigX1);
+    color: var(--darkTxt);
     display: block;
     border: none;
-    padding: var(--cardPadding);
     text-align: center;
-    font-size: 16px;
-    box-shadow: ${({ theme }) => theme.elevation.dp1};
-    transition: var(--basicTransition);
-    font-size: var(--headingSize);
     font-weight: bold;
-    color: var(--darkTxt);
+    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -36,20 +34,20 @@ export const SectionNewsletterStyles = styled.section`
 
   .login,
   .newsletter {
+    transition: var(--transitionFast);
     position: relative;
     outline: none;
-    transition: var(--basicTransition);
   }
 
   .login::after,
   .newsletter::after {
+    transition: var(--transitionFast);
     content: '';
     position: absolute;
     width: 100%;
     height: 10px;
     bottom: 0;
     right: 0;
-    transition: var(--basicTransition);
     opacity: 0;
   }
 
@@ -86,11 +84,12 @@ export const SectionNewsletterStyles = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: var(--fontSizeBigX1);
   }
 
   .icon {
-    font-size: 30px;
-    margin-right: 10px;
+    font-size: var(--fontSizeBigX1);
+    margin-right: var(--spacingSmall);
     margin-bottom: 3px;
   }
 `;
