@@ -13,6 +13,10 @@ const Typography = createGlobalStyle`
     margin: 0;
   }
 
+h2 {
+  margin-top: 35px;
+}
+
   a {
     text-decoration: none !important;
   }
