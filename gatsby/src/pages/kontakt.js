@@ -1,7 +1,11 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import { BootsContainer } from '../components/BootsElements';
+import {
+  BootsColumn,
+  BootsContainer,
+  BootsRow,
+} from '../components/BootsElements';
 import SectionHero from '../components/SectionHero/SectionHero';
 
 import Layout from '../components/Layout/Layout';
@@ -39,18 +43,49 @@ const Kontakt = ({ data }) => (
     />
     <main>
       <BootsContainer style={{ marginTop: '60px' }}>
-        <h2 id="blog" className="leadTxt">
-          Komunikat
-        </h2>
-        <p>
-          Z dniem 31.12.2020 spółka Masterprojekt S.C. została zlikwidowana.
-          Wszystkim klientom i partnerom dziękujemy za lata owocnej współpracy.
-        </p>
-        <p style={{ marginBottom: '100px' }}>
-          W przypadku konieczności wprowadzenia poprawek lub uzupełnień do już
-          wykonanej dokumentacji prosimy o kontakt na dotychczasowe numery
-          telefonów,
-        </p>
+        <BootsRow>
+          <BootsColumn md="6">
+            <p>
+              Z dniem 31.12.2020 spółka Masterprojekt S.C. została zlikwidowana.
+              Wszystkim klientom i partnerom dziękujemy za lata owocnej
+              współpracy.
+            </p>
+            <p style={{ marginBottom: '100px' }}>
+              W przypadku konieczności wprowadzenia poprawek lub uzupełnień do
+              już wykonanej dokumentacji prosimy o kontakt na dotychczasowe
+              numery telefonów,
+            </p>
+          </BootsColumn>
+          <BootsColumn md="6">
+            <form
+              name="contact v1"
+              method="post"
+              data-netlify="true"
+              onSubmit="submit"
+            >
+              <input type="hidden" name="form-name" value="contact v1" />
+              <div>
+                <label htmlFor="first-name">
+                  First name:
+                  <br /> <input type="text" name="first-name" />
+                </label>
+              </div>
+              <div>
+                <label htmlFor="email">
+                  Email:
+                  <br /> <input type="email" name="email" />
+                </label>
+              </div>
+              <div>
+                <label htmlFor="message">
+                  Text:
+                  <br /> <textarea type="email" name="message" />
+                </label>
+              </div>
+              <button type="submit">submit</button>
+            </form>
+          </BootsColumn>
+        </BootsRow>
       </BootsContainer>
     </main>
   </Layout>
