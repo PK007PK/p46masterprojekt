@@ -47,6 +47,7 @@ function MobileMenu({ clickBtn }) {
                 bg="#1C2331"
                 duration={0.4}
                 to={item.link}
+                onClick={clickBtn}
               >
                 {item.name}
               </AniLink>
