@@ -21,6 +21,8 @@ export const ModalStyles = styled.div`
   }
 
   .modal {
+    width: 90%;
+    max-width: 700px;
     border-radius: var(--borderRadiusBasic);
     animation: intro 0.4s ease;
     padding: var(--spacingMedium);

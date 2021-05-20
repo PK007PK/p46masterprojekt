@@ -10,6 +10,7 @@ import SectionHero from '../components/SectionHero/SectionHero';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO';
+import FormContact from '../components/FormContact/FormContact';
 
 const HeroBottomBarStyles = styled.div`
   ${({ theme }) => theme.media.mdAbove} {
@@ -57,33 +58,7 @@ const Kontakt = ({ data }) => (
             </p>
           </BootsColumn>
           <BootsColumn md="6">
-            <form
-              name="contact v1"
-              method="post"
-              data-netlify="true"
-              onSubmit="submit"
-            >
-              <input type="hidden" name="form-name" value="contact v1" />
-              <div>
-                <label htmlFor="first-name">
-                  First name:
-                  <br /> <input type="text" name="first-name" />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="email">
-                  Email:
-                  <br /> <input type="email" name="email" />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="message">
-                  Text:
-                  <br /> <textarea type="email" name="message" />
-                </label>
-              </div>
-              <button type="submit">submit</button>
-            </form>
+            <FormContact />
           </BootsColumn>
         </BootsRow>
       </BootsContainer>
