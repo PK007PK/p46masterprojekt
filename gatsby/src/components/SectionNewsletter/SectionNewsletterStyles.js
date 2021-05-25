@@ -18,7 +18,7 @@ export const SectionNewsletterStyles = styled.section`
   .tile {
     padding: var(--spacingRegular);
     box-shadow: ${({ theme }) => theme.elevation.dp1};
-    font-size: var(--fontSizeBigX1);
+    font-size: var(--fontSizeBig1);
     color: var(--darkTxt);
     display: block;
     border: none;
@@ -84,7 +84,7 @@ export const SectionNewsletterStyles = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--fontSizeBigX1);
+    font-size: 25px;
   }
 
   .icon {

@@ -53,7 +53,7 @@ html {
     --fontSizeXSmall: 12px;
     --fontSizeSmall: 14px;
     --fontSizeRegular: 17px;
-    --fontSizeBigX1: 25px;
+    --fontSizeBigX1: 20px;
     --fontSizeBigX2: 40px;
     --fontSizeBigX3: 80px;
 
