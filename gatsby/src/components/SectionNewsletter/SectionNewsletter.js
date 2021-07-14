@@ -39,6 +39,7 @@ function SectionNewsletter() {
         <Modal ref={modalRef1} title="Strefa Klienta">
           <FormLogin />
         </Modal>
+
         <Modal ref={modalRef2} title="Newsletter">
           <FormMailchimp />
         </Modal>
