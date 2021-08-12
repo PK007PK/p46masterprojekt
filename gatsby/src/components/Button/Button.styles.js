@@ -8,9 +8,15 @@ export const StyledButton = styled(Link)`
   transition: var(--transitionBasic);
   display: block;
   text-align: center;
+  background-color: var(--colorWhite);
+  border: none;
 
   &:hover,
   &:focus {
     box-shadow: ${({ theme }) => theme.elevation.dp4};
+    background-color: var(--deepBlue);
+    color: var(--offWhite);
+  }
+  &:active {
   }
 `;
