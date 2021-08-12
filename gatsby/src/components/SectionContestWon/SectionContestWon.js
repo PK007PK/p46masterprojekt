@@ -47,7 +47,9 @@ export default function SectionContestWon({ data }) {
         <BootsRow>
           <BootsColumn md="8" />
           <BootsColumn md="4">
-            <Button to="/portfolio">Portfolio</Button>
+            <Button to="/portfolio" style={{ marginBottom: '25px' }}>
+              Portfolio
+            </Button>
           </BootsColumn>
         </BootsRow>
       </BootsContainer>

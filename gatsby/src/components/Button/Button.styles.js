@@ -10,6 +10,7 @@ export const StyledButton = styled(Link)`
   text-align: center;
   background-color: var(--colorWhite);
   border: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {
